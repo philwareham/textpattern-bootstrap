@@ -2,7 +2,7 @@ h1. Textpattern Bootstrap Templates
 
 Demo TO DO.
 
-Textpattern templates for use with Zurb Foundation, using their "Sass/Compass build stream":http://foundation.zurb.com/docs/sass.html.
+Textpattern templates for use with "Bootstrap":http://getbootstrap.com.
 
 h2. Requirements
 
@@ -26,4 +26,4 @@ TO DO.
 
 h2. License
 
-Licensed under MIT license except Texpattern templates, which are licensed under GPLv2 license.
+Licensed under "MIT license":https://github.com/twbs/bootstrap/blob/master/LICENSE except Texpattern templates, which are licensed under GPLv2 license.
