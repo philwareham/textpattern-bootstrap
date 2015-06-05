@@ -26,4 +26,4 @@ TO DO.
 
 h2. License
 
-Licensed under "MIT license":https://github.com/twbs/bootstrap/blob/master/LICENSE except Texpattern templates, which are licensed under GPLv2 license.
+Licensed under "MIT license":https://github.com/twbs/bootstrap/blob/master/LICENSE except Textpattern templates, which are licensed under GPLv2 license.
