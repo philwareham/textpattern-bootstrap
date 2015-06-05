@@ -1,0 +1,7 @@
+{
+  "name": "textpattern-bootstrap",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.3"
+  }
+}
