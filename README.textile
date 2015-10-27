@@ -6,7 +6,17 @@ Textpattern templates for use with "Bootstrap":http://getbootstrap.com.
 
 h2. Requirements
 
-TO DO.
+* "Node.js":http://nodejs.org/ >=0.10.0
+* "Grunt":http://gruntjs.com/ ~0.4.0
+* "Bower":http://bower.io/ >=1.0.0
+
+Environment must consist of:
+
+* Apache 2
+* PHP >=5.3
+* MySQL >=5
+* Textpattern CMS 4.6.0-dev
+* Unix-like OS, e.g. Linux or Mac OS
 
 h2. Setup
 
