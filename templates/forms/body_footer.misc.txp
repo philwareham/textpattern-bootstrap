@@ -1,0 +1,13 @@
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <p>
+            © <txp:php>echo date('Y');</txp:php> no one at all. Go to town.
+            Published with <a href="http://textpattern.com/" rel="external" title="Go to the Textpattern CMS website">Textpattern CMS</a>.
+        </p>
+    </div>
+</footer>
+<script src="<txp:site_url />assets/js/vendor/jquery.js"></script>
+<script src="<txp:site_url />assets/js/foundation.js"></script>
+<script src="<txp:site_url />assets/js/vendor/fastclick.js"></script>
+<script src="assets/js/app.@@timestamp.js"></script>
