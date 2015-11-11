@@ -1,5 +1,7 @@
 h1. Textpattern Bootstrap Templates
 
+!https://travis-ci.org/philwareham/textpattern-bootstrap.svg?branch=master!:https://travis-ci.org/philwareham/textpattern-bootstrap !https://david-dm.org/philwareham/textpattern-bootstrap/dev-status.svg(devDependency Status)!:https://david-dm.org/philwareham/textpattern-bootstrap#info=devDependencies
+
 Demo TO DO.
 
 Textpattern templates for use with "Bootstrap":http://getbootstrap.com.
@@ -48,15 +50,26 @@ This will download the latest development version of Textpattern CMS and place i
 
 h2. Building
 
-TO DO.
+This repository hosts sources and needs to be built before it can be used. After you have installed all dependencies, you will be able to run tasks using Grunt, including building:
+
+bc. $ grunt [task]
+
+Where the @[task]@ is either @build@, @sass@, @setup@ or @watch@.
+
+* The @build@ task builds the project.
+* The @sass@ task builds just the CSS files of the project.
+* The @setup@ task installs the latest build of Textpattern master branch from GitHub.
+* The @watch@ task will launch a task that watches for file changes; the project is then automatically built if a source file is modified.
 
 h2. Updating Bootstrap
 
-TO DO.
+If you'd like to upgrade to a newer version of Bootstrap down the road just run:
+
+bc. $ bower update
 
 h2. Textpattern templates
 
-TO DO.
+*Currently under development.*
 
 h2. License
 
