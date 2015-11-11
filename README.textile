@@ -20,7 +20,31 @@ Environment must consist of:
 
 h2. Setup
 
-TO DO.
+h3. Installing required tools
+
+The project uses "Grunt":http://gruntjs.com/ to run tasks and "Sass":http://sass-lang.com/ for CSS pre-processing. First make sure you have base dependencies installed: "Node.js":http://nodejs.org/, "Grunt":http://gruntjs.com/ and "Bower":http://bower.io/. You can install Node using the "installer":https://nodejs.org and the rest with npm:
+
+bc. $ npm install -g bower grunt-cli
+
+Consult the tools' documentation for more instructions. You might need to use @sudo npm install -g bower grunt-cli@ instead when installing on certain Unix-based systems.
+
+h3. Installing dependencies
+
+After you have the base dependencies taken care of, you can install the project's dependencies. Navigate to the project's directory, and run the dependency managers:
+
+bc. $ cd textpattern-bootstrap
+$ npm install
+$ bower install
+
+*npm* installs Node modules for Grunt and *bower* manages client-side scripts. You might need to use @sudo npm install@ instead when installing on certain Unix-based systems. The project will also require the normal git, Apache, MySQL and PHP in order to run Textpattern. All requirements must be added to your path variable.
+
+h3. Installing Textpattern
+
+Once you have Grunt installed, installing and updating Textpattern is easy. To setup or update Textpattern run:
+
+bc. $ grunt setup
+
+This will download the latest development version of Textpattern CMS and place it in the @public/@ directory. Complete the installation as usual by visiting the @/textpattern/setup@ interface and following the instructions therein. Further updates can be run with the same command, and are automatic.
 
 h2. Building
 
