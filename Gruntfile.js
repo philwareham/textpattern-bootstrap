@@ -2,12 +2,8 @@ module.exports = function (grunt)
 {
     'use strict';
 
-    // Load Grunt plugins.
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-replace');
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-shell');
+    // Load all Grunt tasks.
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -40,7 +36,7 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
-                includePaths: ['bower_components/bootstrap/scss']
+                includePaths: ['node_modules/bootstrap/scss']
             },
             dist: {
                 options: {
@@ -65,13 +61,13 @@ module.exports = function (grunt)
             }
         },
 
-        // Uglify and copy JavaScript files from `bower_components` and `js` to `public/assets/js/`.
+        // Uglify and copy JavaScript files from `node_modules` and `js` to `public/assets/js/`.
         uglify: {
             dist: {
                 files: [
                     {
                         expand: true,
-                        cwd: 'bower_components/bootstrap/dist/js',
+                        cwd: 'node_modules/bootstrap/dist/js',
                         src: [
                             '**/*.js',
                             // Ignore the duplicate minified file.
@@ -84,7 +80,6 @@ module.exports = function (grunt)
                         cwd: 'js/',
                         src: ['**/*.js'],
                         dest: 'public/assets/js/'
-                        // TODO: copy `bower_components` files.
                     }
                 ]
             }
@@ -96,7 +91,6 @@ module.exports = function (grunt)
                 files: 'scss/**',
                 tasks: ['sass']
             },
-
             js: {
                 files: 'js/**',
                 tasks: ['uglify']
