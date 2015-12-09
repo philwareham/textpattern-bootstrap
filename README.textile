@@ -65,7 +65,7 @@ h2. Updating Bootstrap
 
 If you'd like to upgrade to a newer version of Bootstrap down the road just run:
 
-bc. $ bower update
+bc. $ npm update
 
 h2. Textpattern templates
 
