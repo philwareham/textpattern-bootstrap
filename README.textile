@@ -1,6 +1,6 @@
 h1. Textpattern Bootstrap Templates
 
-!https://travis-ci.org/philwareham/textpattern-bootstrap.svg?branch=master!:https://travis-ci.org/philwareham/textpattern-bootstrap !https://david-dm.org/philwareham/textpattern-bootstrap/dev-status.svg(devDependency Status)!:https://david-dm.org/philwareham/textpattern-bootstrap#info=devDependencies
+!https://travis-ci.org/philwareham/textpattern-bootstrap.svg?branch=master!:https://travis-ci.org/philwareham/textpattern-bootstrap !https://david-dm.org/philwareham/textpattern-bootstrap/status.svg(Dependency Status)!:https://david-dm.org/philwareham/textpattern-bootstrap#info=dependencies !https://david-dm.org/philwareham/textpattern-bootstrap/dev-status.svg(devDependency Status)!:https://david-dm.org/philwareham/textpattern-bootstrap#info=devDependencies
 
 Demo TO DO.
 
