@@ -13,6 +13,20 @@ module.exports = function (grunt)
             timestamp: '<%= new Date().getTime() %>'
         },
 
+        // Report on any available updates for dependencies.
+        devUpdate: {
+            main: {
+                options: {
+                    updateType: 'report',
+                    reportUpdated: false, // Don't report up-to-date packages.
+                    packages: {
+                        dependencies: true,
+                        devDependencies: true
+                    }
+                }
+            }
+        },
+
         // Generate filename timestamps within template/mockup files.
         replace: {
             theme: {
@@ -36,13 +50,11 @@ module.exports = function (grunt)
         // Sass configuration.
         sass: {
             options: {
-                includePaths: ['node_modules/bootstrap/scss']
+                includePaths: ['node_modules/bootstrap/scss'],
+                outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
+                sourceMap: false
             },
             dist: {
-                options: {
-                    outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
-                    sourceMap: true
-                },
                 files: {
                     'public/assets/css/app.css': 'scss/app.scss'
                 }
