@@ -13,7 +13,7 @@ Textpattern templates for use with [Bootstrap](http://getbootstrap.com).
 * Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
 
-h2. Requirements
+## Requirements
 
 Building this repository requires:
 
