@@ -13,6 +13,18 @@ module.exports = function (grunt)
             timestamp: '<%= new Date().getTime() %>'
         },
 
+        // Clean distribution directory to start afresh.
+        clean: ['<%= paths.dest.dist %>'],
+
+        // Run some tasks in parallel to speed up the build process.
+        concurrent: {
+            dist: [
+                'css',
+                'copy',
+                'devUpdate'
+            ]
+        },
+
         // Report on any available updates for dependencies.
         devUpdate: {
             main: {
@@ -24,6 +36,27 @@ module.exports = function (grunt)
                         devDependencies: true
                     }
                 }
+            }
+        },
+
+        // Add vendor prefixed styles and other post-processing transformations.
+        postcss: {
+            options: {
+                processors: [
+                    require('autoprefixer')({
+                        browsers: [
+                            'last 3 versions',
+                            'not ie <= 11'
+                        ]
+                    }),
+                    require('cssnano')()
+                ]
+            },
+            files: {
+                expand: true,
+                cwd: '<%= paths.dest.css %>',
+                src: ['*.css', '!*.min.css'],
+                dest: '<%= paths.dest.css %>'
             }
         },
 
@@ -57,18 +90,6 @@ module.exports = function (grunt)
             dist: {
                 files: {
                     'public/assets/css/app.css': 'scss/app.scss'
-                }
-            }
-        },
-
-        // Run Textpattern setup script.
-        shell: {
-            setup: {
-                command: [
-                    'php setup/setup.php'
-                ].join('&&'),
-                options: {
-                    stdout: true
                 }
             }
         },
@@ -112,8 +133,8 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['sass', 'replace', 'uglify']);
+    grunt.registerTask('build', ['clean', 'concurrent']);
+    grunt.registerTask('css', ['sasslint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('setup', ['shell:setup']);
-    grunt.registerTask('travis', ['sass']);
+    grunt.registerTask('travis', ['jshint', 'build']);
 };
