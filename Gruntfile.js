@@ -43,13 +43,8 @@ module.exports = function (grunt)
         postcss: {
             options: {
                 processors: [
-                    require('autoprefixer')({
-                        browsers: [
-                            'last 3 versions',
-                            'not ie <= 11'
-                        ]
-                    }),
-                    require('cssnano')()
+                    require('autoprefixer'),
+                    require('cssnano')
                 ]
             },
             files: {
