@@ -1,8 +1,7 @@
 # Textpattern Bootstrap Templates
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/philwareham/textpattern-bootstrap.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/philwareham/textpattern-bootstrap/master.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
-[![Dependency Status](http://img.shields.io/david/philwareham/textpattern-bootstrap.svg)](https://david-dm.org/philwareham/textpattern-bootstrap)
-[![devDependency Status](http://img.shields.io/david/dev/philwareham/textpattern-bootstrap.svg)](https://david-dm.org/philwareham/textpattern-bootstrap?type=dev)
 
 Demo TODO.
 
@@ -17,8 +16,8 @@ Textpattern templates for use with [Bootstrap](http://getbootstrap.com).
 
 Building this repository requires:
 
-* [Node.js](http://nodejs.org/) >=0.12.0
-* [Grunt](http://gruntjs.com/) >=0.4.0
+* [Node.js](https://nodejs.org/) >=4.0
+* [Grunt](https://gruntjs.com/) >=1.0
 
 ## Setup
 
