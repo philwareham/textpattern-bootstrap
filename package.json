@@ -10,7 +10,7 @@
     "url": "https://github.com/philwareham/textpattern-bootstrap/issues"
   },
   "devDependencies": {
-    "autoprefixer": "7.0.1",
+    "autoprefixer": "7.1.4",
     "cssnano": "3.10.0",
     "grunt": "~1.0",
     "grunt-cli": "~1",
@@ -28,7 +28,7 @@
     "sass-lint": "1.10.2"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6"
+    "bootstrap": "4.0.0-beta"
   },
   "browserslist": [
     "last 2 versions",
