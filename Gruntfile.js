@@ -8,11 +8,6 @@ module.exports = function (grunt)
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Set up timestamp.
-        opt : {
-            timestamp: '<%= new Date().getTime() %>'
-        },
-
         // Clean distribution directory to start afresh.
         clean: ['<%= paths.dest.dist %>'],
 
@@ -37,26 +32,6 @@ module.exports = function (grunt)
                 cwd: '<%= paths.dest.css %>',
                 src: ['*.css', '!*.min.css'],
                 dest: '<%= paths.dest.css %>'
-            }
-        },
-
-        // Generate filename timestamps within template/mockup files.
-        replace: {
-            theme: {
-                options: {
-                    patterns: [{
-                            match: 'timestamp',
-                            replacement: '<%= opt.timestamp %>'
-                    }]
-                },
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'templates/',
-                        src: ['**'],
-                        dest: 'public/templates/'
-                    }
-                ]
             }
         },
 
