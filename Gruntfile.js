@@ -112,32 +112,37 @@ module.exports = function (grunt)
             ]
         },
 
-        // Uglify and copy JavaScript files from framework plus `js/app.js` to `public/assets/js/`.
+        // Uglify and copy JavaScript files from `node_modules` plus `js/app.js` to `public/assets/js/`.
         uglify: {
             dist: {
-                src: [
-                    // Option 1: All Bootstrap JavaScript.
-                    'node_modules/bootstrap/dist/js/bootstrap.js',
+                files: [
+                    {
+                        '<%= paths.dest.js %>app.min.js': [
+                            // Option 1: All Bootstrap JavaScript.
+                            'node_modules/bootstrap/dist/js/bootstrap.js',
 
-                    // Option 2: Selective Bootstrap JavaScript.
-                    //'node_modules/bootstrap/js/dist/*.js',
-                    // Ignore JavaScript plugins that you do not require in your project, for example:
-                    //'!alert.js',
-                    //'!button.js',
-                    //'!carousel.js',
-                    //'!collapse.js',
-                    //'!dropdown.js',
-                    //'!modal.js',
-                    //'!popover.js',
-                    //'!scrollspy.js',
-                    //'!tab.js',
-                    //'!tooltip.js',
-                    //'!util.js',
+                            // Option 2: Selective Bootstrap JavaScript.
+                            //'node_modules/bootstrap/js/dist/*.js',
+                            // Ignore JavaScript plugins that you do not require in your project, for example:
+                            //'!alert.js',
+                            //'!button.js',
+                            //'!carousel.js',
+                            //'!collapse.js',
+                            //'!dropdown.js',
+                            //'!modal.js',
+                            //'!popover.js',
+                            //'!scrollspy.js',
+                            //'!tab.js',
+                            //'!tooltip.js',
+                            //'!util.js',
 
-                    // Then add site-specific JavaScript at the end of file.
-                    '<%= paths.src.js %>app.js'
-                ],
-                dest: '<%= paths.dest.js %>app.min.js'
+                            // Then add site-specific JavaScript at the end of file.
+                            '<%= paths.src.js %>app.js'
+                        ],
+                        // Site-specific vendor JavaScript libraries.
+                        '<%= paths.dest.js %>vendor/popper.min.js': ['node_modules/popper.js/dist/umd/popper.js']
+                    }
+                ]
             }
         },
 
