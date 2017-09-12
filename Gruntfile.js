@@ -28,41 +28,16 @@ module.exports = function (grunt)
             '<%= paths.dest.js %>'
         ],
 
-        concat: {
-            dist: {
-                src: [
-                    // Option 1: All Bootstrap JavaScript.
-                    'node_modules/bootstrap/dist/js/bootstrap.js'
-
-                    // Option 2: Selective Bootstrap JavaScript.
-                    //'node_modules/bootstrap/js/dist/*.js'
-                    // Ignore JavaScript plugins that you do not require in your project, for example:
-                    //, '!alert.js'
-                    //, '!button.js'
-                    //, '!carousel.js'
-                    //, '!collapse.js'
-                    //, '!dropdown.js'
-                    //, '!modal.js'
-                    //, '!popover.js'
-                    //, '!scrollspy.js'
-                    //, '!tab.js'
-                    //, '!tooltip.js'
-                    //, '!util.js'
-                ],
-                dest: '<%= paths.dest.js %>bootstrap.min.js'
-            }
-        },
-
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
                 'css',
-                'concat',
-                'jshint'
+                'jshint',
+                'uglify'
             ]
         },
 
-        // Check code quality of Gruntfile.js using JSHint.
+        // Check code quality of Gruntfile.js and site-specific JavaScript using JSHint.
         jshint: {
             options: {
                 bitwise: true,
@@ -144,17 +119,29 @@ module.exports = function (grunt)
         // Uglify and copy JavaScript files from `node_modules` and `js` to `public/assets/js/`.
         uglify: {
             dist: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= paths.dest.js %>',
-                        src: ['**/*.js'],
-                        dest: 'public/assets/js/'
-                    },
-                    {
-                        '<%= paths.dest.js %>app.min.js': ['<%= paths.src.js %>app.js']
-                    }
-                ]
+                src: [
+                    // Option 1: All Bootstrap JavaScript.
+                    'node_modules/bootstrap/dist/js/bootstrap.js',
+
+                    // Option 2: Selective Bootstrap JavaScript.
+                    //'node_modules/bootstrap/js/dist/*.js',
+                    // Ignore JavaScript plugins that you do not require in your project, for example:
+                    //'!alert.js',
+                    //'!button.js',
+                    //'!carousel.js',
+                    //'!collapse.js',
+                    //'!dropdown.js',
+                    //'!modal.js',
+                    //'!popover.js',
+                    //'!scrollspy.js',
+                    //'!tab.js',
+                    //'!tooltip.js',
+                    //'!util.js',
+
+                    // Then add site-specific JavaScript at the end of file.
+                    '<%= paths.src.js %>app.js'
+                ],
+                dest: '<%= paths.dest.js %>app.min.js'
             }
         },
 
@@ -173,7 +160,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent', 'uglify']);
+    grunt.registerTask('build', ['clean', 'concurrent']);
     grunt.registerTask('css', ['sasslint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
