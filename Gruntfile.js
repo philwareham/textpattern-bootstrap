@@ -82,11 +82,7 @@ module.exports = function (grunt)
             files: {
                 expand: true,
                 cwd: '<%= paths.dest.css %>',
-                src: [
-                    '*.css',
-                    // Ignore any existing minified CSS files.
-                    '!*.min.css'
-                ],
+                src: ['*.css'],
                 dest: '<%= paths.dest.css %>'
             }
         },
@@ -116,7 +112,7 @@ module.exports = function (grunt)
             ]
         },
 
-        // Uglify and copy JavaScript files from `node_modules` and `js` to `public/assets/js/`.
+        // Uglify and copy JavaScript files from framework plus `js/app.js` to `public/assets/js/`.
         uglify: {
             dist: {
                 src: [
