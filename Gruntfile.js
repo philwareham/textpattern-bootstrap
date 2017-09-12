@@ -57,7 +57,42 @@ module.exports = function (grunt)
         concurrent: {
             dist: [
                 'css',
-                'concat'
+                'concat',
+                'jshint'
+            ]
+        },
+
+        // Check code quality of Gruntfile.js using JSHint.
+        jshint: {
+            options: {
+                bitwise: true,
+                camelcase: true,
+                curly: true,
+                eqeqeq: true,
+                es3: true,
+                forin: true,
+                immed: true,
+                indent: 4,
+                latedef: true,
+                noarg: true,
+                noempty: true,
+                nonew: true,
+                quotmark: 'single',
+                undef: true,
+                unused: true,
+                strict: true,
+                trailing: true,
+                browser: true,
+                globals: {
+                    jQuery: false,
+                    $: false,
+                    module: true,
+                    require: true
+                }
+            },
+            files: [
+                'Gruntfile.js',
+                '<%= paths.src.js %>**/*.js'
             ]
         },
 
