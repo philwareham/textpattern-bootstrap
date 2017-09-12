@@ -28,11 +28,36 @@ module.exports = function (grunt)
             '<%= paths.dest.js %>'
         ],
 
+        concat: {
+            dist: {
+                src: [
+                    // Option 1: All Bootstrap JavaScript.
+                    'node_modules/bootstrap/dist/js/bootstrap.js'
+
+                    // Option 2: Selective Bootstrap JavaScript.
+                    //'node_modules/bootstrap/js/dist/*.js'
+                    // Ignore JavaScript plugins that you do not require in your project, for example:
+                    //, '!alert.js'
+                    //, '!button.js'
+                    //, '!carousel.js'
+                    //, '!collapse.js'
+                    //, '!dropdown.js'
+                    //, '!modal.js'
+                    //, '!popover.js'
+                    //, '!scrollspy.js'
+                    //, '!tab.js'
+                    //, '!tooltip.js'
+                    //, '!util.js'
+                ],
+                dest: '<%= paths.dest.js %>bootstrap.min.js'
+            }
+        },
+
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
                 'css',
-                'copy'
+                'concat'
             ]
         },
 
@@ -47,7 +72,11 @@ module.exports = function (grunt)
             files: {
                 expand: true,
                 cwd: '<%= paths.dest.css %>',
-                src: ['*.css', '!*.min.css'],
+                src: [
+                    '*.css',
+                    // Ignore any existing minified CSS files.
+                    '!*.min.css'
+                ],
                 dest: '<%= paths.dest.css %>'
             }
         },
@@ -57,11 +86,11 @@ module.exports = function (grunt)
             options: {
                 includePaths: ['node_modules/bootstrap/scss'],
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
-                sourceMap: true
+                sourceMap: false
             },
             dist: {
                 files: {
-                    '<%= paths.dest.css %>app.css': '<%= paths.src.sass %>app.scss'
+                    '<%= paths.dest.css %>app.min.css': '<%= paths.src.sass %>app.scss'
                 }
             }
         },
@@ -71,7 +100,10 @@ module.exports = function (grunt)
             options: {
                 configFile: '.sass-lint.yml'
             },
-            target: ['<%= paths.src.sass %>**/*.scss']
+            target: [
+                '<%= paths.src.sass %>**/*.scss',
+                '!<%= paths.src.sass %>_custom.scss'
+            ]
         },
 
         // Uglify and copy JavaScript files from `node_modules` and `js` to `public/assets/js/`.
@@ -80,19 +112,12 @@ module.exports = function (grunt)
                 files: [
                     {
                         expand: true,
-                        cwd: 'node_modules/bootstrap/dist/js',
-                        src: [
-                            '**/*.js',
-                            // Ignore the duplicate minified file.
-                            '!bootstrap.min.js',
-                        ],
+                        cwd: '<%= paths.dest.js %>',
+                        src: ['**/*.js'],
                         dest: 'public/assets/js/'
                     },
                     {
-                        expand: true,
-                        cwd: 'js/',
-                        src: ['**/*.js'],
-                        dest: 'public/assets/js/'
+                        '<%= paths.dest.js %>app.min.js': ['<%= paths.src.js %>app.js']
                     }
                 ]
             }
@@ -113,7 +138,7 @@ module.exports = function (grunt)
     });
 
     // Register tasks.
-    grunt.registerTask('build', ['clean', 'concurrent']);
+    grunt.registerTask('build', ['clean', 'concurrent', 'uglify']);
     grunt.registerTask('css', ['sasslint', 'sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('travis', ['jshint', 'build']);
