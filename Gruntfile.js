@@ -8,8 +8,25 @@ module.exports = function (grunt)
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        // Clean distribution directory to start afresh.
-        clean: ['<%= paths.dest.dist %>'],
+        // Set up paths.
+        paths: {
+            src: {
+                sass: 'scss/',
+                js: 'js/',
+                templates: 'templates/'
+            },
+            dest: {
+                css: 'public/assets/css/',
+                js: 'public/assets/js/',
+                templates: 'public/templates/'
+            }
+        },
+
+        // Clean distribution and temporary directories to start afresh.
+        clean: [
+            '<%= paths.dest.css %>',
+            '<%= paths.dest.js %>'
+        ],
 
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
@@ -40,13 +57,21 @@ module.exports = function (grunt)
             options: {
                 includePaths: ['node_modules/bootstrap/scss'],
                 outputStyle: 'expanded', // outputStyle = expanded, nested, compact or compressed.
-                sourceMap: false
+                sourceMap: true
             },
             dist: {
                 files: {
-                    'public/assets/css/app.css': 'scss/app.scss'
+                    '<%= paths.dest.css %>app.css': '<%= paths.src.sass %>app.scss'
                 }
             }
+        },
+
+        // Validate Sass files via sass-lint.
+        sasslint: {
+            options: {
+                configFile: '.sass-lint.yml'
+            },
+            target: ['<%= paths.src.sass %>**/*.scss']
         },
 
         // Uglify and copy JavaScript files from `node_modules` and `js` to `public/assets/js/`.
