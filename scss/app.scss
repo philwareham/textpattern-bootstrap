@@ -1,4 +1,43 @@
 @charset "utf-8";
 
-@import "bootstrap";
+@import "bootstrap-reboot";
 @import "custom";
+
+
+
+// Comment out any Bootstrap modules that you are not using in your project.
+
+@import "print";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "utilities";
+
+
+
+// Add your additional CSS/SCSS rule-sets below.
