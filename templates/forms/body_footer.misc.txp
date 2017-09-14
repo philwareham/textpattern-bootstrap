@@ -1,13 +1,7 @@
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <p>
-            © <txp:php>echo date('Y');</txp:php> no one at all. Go to town.
-            Published with <a href="http://textpattern.com/" rel="external" title="Go to the Textpattern CMS website">Textpattern CMS</a>.
-        </p>
-    </div>
+<footer class="blog-footer">
+    <p><txp:text item="published_with" /> <a rel="external nofollow" href="https://textpattern.io/" title="<txp:text item="go_txp_com" />">Textpattern CMS</a></p>
+    <p><a href="#">Back to top</a></p>
 </footer>
-<script src="<txp:site_url />assets/js/vendor/jquery.js"></script>
-<script src="<txp:site_url />assets/js/foundation.js"></script>
-<script src="<txp:site_url />assets/js/vendor/fastclick.js"></script>
-<script src="assets/js/app.@@timestamp.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="<txp:site_url />assets/js/vendor/popper.min.js"></script>
+<script src="<txp:site_url />assets/js/app.min.js"></script>

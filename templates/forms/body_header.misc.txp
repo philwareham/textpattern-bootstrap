@@ -1,22 +1,17 @@
-<div class="contain-to-grid sticky">
-    <nav class="top-bar" data-topbar data-options="is_hover: false, sticky_on: large" itemscope itemtype="http://schema.org/SiteNavigationElement">
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="<txp:site_url />"><txp:site_name /></a></h1>
-            </li>
-            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-            <li class="toggle-topbar menu-icon">
-                <a href="#"><span>Menu</span></a>
-            </li>
-        </ul>
-        <section class="top-bar-section">
-            <txp:section_list class="left" default_title="Home" include_default="1" wraptag="ul" break="">
-                <li<txp:if_section name='<txp:section />'> class="active"</txp:if_section>>
-                    <a itemprop="url" href="<txp:section url="1" />">
-                        <txp:section title="1" />
-                    </a>
-                </li>
+<header>
+    <div class="blog-masthead">
+        <div class="container">
+            <txp:section_list class="nav" default_title='<txp:text item="home" />' include_default="1" wraptag="nav" break="">
+                <a class="nav-link<txp:if_section name="<txp:section />"> active</txp:if_section>" itemprop="url" href="<txp:section url="1" />">
+                    <txp:section title="1" />
+                </a>
             </txp:section_list>
-        </section>
-    </nav>
-</div>
+        </div>
+    </div>
+    <div class="blog-header">
+        <div class="container">
+            <h1 class="blog-title"><txp:site_name /></h1>
+            <p class="lead blog-description"><txp:site_slogan /></p>
+        </div>
+    </div>
+</header>
