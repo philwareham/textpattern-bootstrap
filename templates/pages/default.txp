@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="<txp:lang />" dir="<txp:text item="lang_dir" />">
 <head>
-    <meta charset="utf-8">
-    <title>
-        <txp:page_title />
-    </title>
     <txp:output_form form="head" />
+    <title><txp:page_title /></title>
+
     <txp:if_search>
         <meta name="description" content="<txp:text item="search_results" />">
         <meta name="robots" content="none">
