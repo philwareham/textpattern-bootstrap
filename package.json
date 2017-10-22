@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta",
-    "popper.js": "1.12.5"
+    "popper.js": "1.12.6"
   },
   "browserslist": [
     "last 2 versions",
