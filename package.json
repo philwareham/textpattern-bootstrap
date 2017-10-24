@@ -27,7 +27,7 @@
     "sass-lint": "1.12.1"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-beta",
+    "bootstrap": "4.0.0-beta.2",
     "popper.js": "1.12.6"
   },
   "browserslist": [
