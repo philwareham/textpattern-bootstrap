@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />" dir="<txp:text item="lang_dir" />">
+<head>
+    <txp:output_form form="head" />
+    <title><txp:page_title /></title>
+
+    <txp:if_search>
+        <meta name="description" content="<txp:text item="search_results" />">
+        <meta name="robots" content="none">
+    <txp:else />
+        <txp:if_category>
+            <meta name="description" content="<txp:text item="category" /> <txp:category title="1" />">
+            <meta name="robots" content="noindex, follow, noodp, noydir">
+        <txp:else />
+            <txp:if_author>
+                <meta name="description" content="<txp:text item="author" /> <txp:author />">
+                <meta name="robots" content="noindex, follow, noodp, noydir">
+            <txp:else />
+                <meta name="description" content="<txp:site_slogan />">
+                <meta name="robots" content="index, follow, noodp, noydir">
+                <link rel="canonical" href="<txp:site_url />">
+                <txp:variable name="homepage" value="1" />
+            </txp:if_author>
+        </txp:if_category>
+    </txp:if_search>
+</head>
+<txp:if_variable name="homepage">
+    <body class="front-page" id="top" itemscope itemtype="http://schema.org/WebPage">
+        <txp:output_form form="body_header" />
+        <div class="row">
+            <main class="large-9 columns" role="content">
+                <txp:article limit="5" />
+            </main>
+            <aside class="large-3 columns">
+                ...content placeholder...
+            </aside>
+        </div>
+<txp:else />
+<txp:if_search>
+    <body class="search-page" id="top" itemscope itemtype="http://schema.org/SearchResultsPage">
+<txp:else />
+    <body class="listing-page" id="top" itemscope itemtype="http://schema.org/CollectionPage">
+</txp:if_search>
+    <txp:output_form form="body_header" />
+    <div>
+        <main class="large-9 columns" role="content">
+            ...content placeholder...
+        </main>
+        <aside class="large-3 columns">
+            ...content placeholder...
+        </aside>
+    </div>
+</txp:if_variable>
+    <txp:output_form form="body_footer" />
+</body>
+</html>

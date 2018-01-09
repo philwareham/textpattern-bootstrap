@@ -1,0 +1,17 @@
+<header>
+    <div class="blog-masthead">
+        <div class="container">
+            <txp:section_list class="nav" default_title='<txp:text item="home" />' include_default="1" wraptag="nav" break="">
+                <a class="nav-link<txp:if_section name="<txp:section />"> active</txp:if_section>" itemprop="url" href="<txp:section url="1" />">
+                    <txp:section title="1" />
+                </a>
+            </txp:section_list>
+        </div>
+    </div>
+    <div class="blog-header">
+        <div class="container">
+            <h1 class="blog-title"><txp:site_name /></h1>
+            <p class="lead blog-description"><txp:site_slogan /></p>
+        </div>
+    </div>
+</header>

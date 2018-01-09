@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />" dir="<txp:text item="lang_dir" />">
+<head>
+    <txp:output_form form="head" />
+    <title><txp:error_status /></title>
+    <meta name="robots" content="none">
+</head>
+<body class="error-page" id="top" itemscope itemtype="http://schema.org/WebPage">
+    <txp:output_form form="body_header" />
+    <div class="row">
+        <main class="large-9 columns" role="content">
+            <h1 class="error-status">
+                <txp:error_status />
+            </h1>
+            <p class="error-msg">
+                <txp:error_message />
+            </p>
+        </main>
+        <aside class="large-3 columns">
+            ...content placeholder...
+        </aside>
+    </div>
+    <txp:output_form form="body_footer" />
+</body>
+</html>

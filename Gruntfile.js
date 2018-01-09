@@ -16,25 +16,39 @@ module.exports = function (grunt)
                 templates: 'templates/'
             },
             dest: {
-                css: 'public/assets/css/',
-                js: 'public/assets/js/',
-                templates: 'public/templates/'
+                css: 'themes/bootstrap_framework/assets/css/',
+                js: 'themes/bootstrap_framework/assets/js/',
+                templates: 'themes/bootstrap_framework/'
             }
         },
 
         // Clean distribution and temporary directories to start afresh.
         clean: [
-            '<%= paths.dest.css %>',
-            '<%= paths.dest.js %>'
+            'themes/'
         ],
 
         // Run some tasks in parallel to speed up the build process.
         concurrent: {
             dist: [
+                'copy',
                 'css',
                 'jshint',
                 'uglify'
             ]
+        },
+
+        copy: {
+            // Copy JavaScript files from various sources.
+            templates: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src.templates %>',
+                        src: '**',
+                        dest: '<%= paths.dest.templates %>'
+                    }
+                ]
+            }
         },
 
         // Check code quality of Gruntfile.js and site-specific JavaScript using JSHint.
@@ -155,6 +169,10 @@ module.exports = function (grunt)
             js: {
                 files: 'js/**',
                 tasks: ['uglify']
+            },
+            templates: {
+                files: '<%= paths.src.templates %>**',
+                tasks: 'copy'
             }
         }
 

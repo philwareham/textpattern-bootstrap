@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />" dir="<txp:text item="lang_dir" />">
+<head>
+    <txp:output_form form="head" />
+    <title><txp:page_title /></title>
+
+    <txp:if_article_list>
+        <meta name="description" content="">
+        <txp:variable name="page" value='<txp:page_url type="pg" />' />
+        <txp:variable name="prev" value='<txp:newer />' />
+        <txp:variable name="next" value='<txp:older />' />
+        <txp:if_variable name="page" value="">
+            <meta name="robots" content="index, follow, noodp, noydir">
+            <link rel="canonical" href="<txp:section url="1" />">
+        <txp:else />
+            <meta name="robots" content="noindex, follow, noodp, noydir">
+            <link rel="canonical" href="<txp:section url="1" />?pg=<txp:page_url type="pg" />">
+        </txp:if_variable>
+        <txp:if_variable name="prev" value="">
+        <txp:else />
+            <link rel="prev" href="<txp:variable name="prev" />"
+        </txp:if_variable>
+        <txp:if_variable name="next" value="">
+        <txp:else />
+            <link rel="next" href="<txp:variable name="next" />"
+        </txp:if_variable>
+    <txp:else />
+        <txp:meta_author title="1" />
+        <meta name="robots" content="index, follow, noodp, noydir">
+        <link rel="canonical" href="<txp:permlink />">
+    </txp:if_article_list>
+</head>
+<txp:if_article_list>
+    <body class="<txp:section />-page" id="top" itemscope itemtype="http://schema.org/CollectionPage">
+<txp:else />
+    <body class="<txp:section />-page" id="top" itemscope itemtype="http://schema.org/WebPage">
+</txp:if_article_list>
+    <txp:output_form form="body_header" />
+    <div class="row">
+        <main class="large-9 columns" role="content">
+            <txp:if_article_list>
+
+                <h1 itemprop="name">
+                    <txp:section title="1" />
+                </h1>
+                <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
+
+                <txp:variable name="more" value='<txp:newer /><txp:older />' />
+                <txp:variable name="prev" value='<txp:newer />' />
+                <txp:variable name="next" value='<txp:older />' />
+
+                <txp:if_variable name="more" value="">
+                <txp:else />
+                    <p class="paginator">
+                        <txp:if_variable name="prev" value="">
+                        <txp:else />
+                            <a rel="prev" href="<txp:newer />" title="<txp:text item="newer" />">
+                                ← <txp:text item="newer" />
+                            </a>
+                        </txp:if_variable>
+
+                        <txp:if_variable name="next" value="">
+                        <txp:else />
+                            <a rel="next" href="<txp:older />" title="<txp:text item="older" />">
+                                <txp:text item="older" /> →
+                            </a>
+                        </txp:if_variable>
+                    </p>
+                </txp:if_variable>
+
+            <txp:else />
+
+                <txp:article />
+
+                <txp:variable name="more" value='<txp:link_to_prev /><txp:link_to_next />' />
+                <txp:variable name="prev" value='<txp:link_to_prev />' />
+                <txp:variable name="next" value='<txp:link_to_next />' />
+
+                <txp:if_variable name="more" value="">
+                <txp:else />
+                    <p class="paginator">
+                        <txp:if_variable name="prev" value="">
+                        <txp:else />
+                            <a rel="prev" href="<txp:link_to_prev />" title="<txp:prev_title />">
+                                ← <txp:text item="older" />
+                            </a>
+                        </txp:if_variable>
+
+                        <txp:if_variable name="next" value="">
+                        <txp:else />
+                            <a rel="next" href="<txp:link_to_next />" title="<txp:next_title />">
+                                <txp:text item="newer" /> →
+                            </a>
+                        </txp:if_variable>
+                    </p>
+                </txp:if_variable>
+
+            </txp:if_article_list>
+        </main>
+        <aside class="large-3 columns">
+            ...content placeholder...
+        </aside>
+    </div>
+    <txp:output_form form="body_footer" />
+</body>
+</html>
