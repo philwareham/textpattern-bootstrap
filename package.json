@@ -1,6 +1,6 @@
 {
   "name": "textpattern-bootstrap",
-  "description": "Textpattern templates based on Bootstrap framework.",
+  "description": "Bootstrap framework for Textpattern CMS.",
   "version": "0.0.0",
   "repository": {
     "type": "git",
