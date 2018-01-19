@@ -1,8 +1,8 @@
 {
-  "title": "Bootstrap v4 framework theme",
+  "title": "Bootstrap framework theme",
   "txp-type":"textpattern-theme",
   "version": "0.1.0",
-  "description": "Bootstrap v4 framework for Textpattern CMS.",
+  "description": "Bootstrap framework for Textpattern CMS.",
   "author": "Phil Wareham",
   "author_uri": "https://github.com/philwareham/textpattern-bootstrap"
 }
