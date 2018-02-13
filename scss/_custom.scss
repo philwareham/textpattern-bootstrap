@@ -383,6 +383,8 @@ $btn-transition:              color .15s ease-in-out, background-color .15s ease
 
 // Forms
 
+$label-margin-bottom:                   .5rem;
+
 $input-padding-y:                       $input-btn-padding-y;
 $input-padding-x:                       $input-btn-padding-x;
 $input-line-height:                     $input-btn-line-height;
@@ -414,6 +416,7 @@ $input-focus-width:                     $input-btn-focus-width;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow;
 
 $input-placeholder-color:               $gray-600;
+$input-plaintext-color:                 $body-color;
 
 $input-height-border:                   $input-border-width * 2;
 
@@ -483,7 +486,7 @@ $custom-select-indicator-padding:   1rem; // Extra padding to account for the pr
 $custom-select-line-height:         $input-btn-line-height;
 $custom-select-color:               $input-color;
 $custom-select-disabled-color:      $gray-600;
-$custom-select-bg:                  $white;
+$custom-select-bg:                  $input-bg;
 $custom-select-disabled-bg:         $gray-200;
 $custom-select-bg-size:             8px 10px; // In pixels because image dimensions
 $custom-select-indicator-color:     $gray-800;
