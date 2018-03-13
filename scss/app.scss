@@ -1,5 +1,3 @@
-@import "custom";
-
 // Comment out any Bootstrap modules that you are not using in your project.
 
 @import "~bootstrap/scss/functions";
@@ -38,6 +36,8 @@
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
 
+
+@import "custom";
 
 
 // Add your additional CSS/SCSS rule-sets below.
