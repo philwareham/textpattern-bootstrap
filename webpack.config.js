@@ -12,30 +12,7 @@ module.exports = {
     },
     output: {
         path: distDir,
-        filename: '.Trashes'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(scss)$/,
-                use: ExtractTextPlugin.extract({
-                    // Inject CSS to page.
-                    fallback: 'style-loader',
-                    use: [
-                        // Translates CSS into CommonJS modules.
-                        { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
-                        // Run postCSS actions.
-                        { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-                        // Compiles Sass to CSS.
-                        { loader: 'sass-loader', options: { outputStyle: 'compressed', precision: 7 } } // outputStyle = nested, expanded, compact or compressed
-                    ]
-                })
-            },
-            {
-                test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png|\.jpe?g|\.gif$/,
-                loader: 'file-loader'
-            },
-        ]
+        filename: 'bundle.js'
     },
     plugins: [
         new CleanWebpackPlugin(__dirname +'/dist'),
@@ -73,5 +50,28 @@ module.exports = {
             };
             fs.writeFile(this.outputPath+'/manifest.json', JSON.stringify(manifest2, null, 2));
         }),
-    ]
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.(scss)$/,
+                use: ExtractTextPlugin.extract({
+                    // Inject CSS to page.
+                    fallback: 'style-loader',
+                    use: [
+                        // Translates CSS into CommonJS modules.
+                        { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
+                        // Run postCSS actions.
+                        { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
+                        // Compiles Sass to CSS.
+                        { loader: 'sass-loader', options: { outputStyle: 'compressed', precision: 7 } } // outputStyle = nested, expanded, compact or compressed
+                    ]
+                })
+            },
+            {
+                test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png|\.jpe?g|\.gif$/,
+                loader: 'file-loader'
+            },
+        ]
+    }
 };

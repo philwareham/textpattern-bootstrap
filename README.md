@@ -1,11 +1,13 @@
 # Textpattern Bootstrap Templates
 
+**Currently under development.**
+
 [![Greenkeeper badge](https://badges.greenkeeper.io/philwareham/textpattern-bootstrap.svg)](https://greenkeeper.io/)
 [![Build Status](https://img.shields.io/travis/philwareham/textpattern-bootstrap/master.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
 
 [Demo](http://bootstrap.philwareham.co.uk/).
 
-Textpattern templates for use with [Bootstrap](http://getbootstrap.com) v4. **Currently under development.**
+Textpattern templates for use with [Bootstrap](https://getbootstrap.com) v4.
 
 ## Supported web browsers
 
