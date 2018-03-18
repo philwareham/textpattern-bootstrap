@@ -25,7 +25,7 @@
     "image-webpack-loader": "4.2.0",
     "node-sass": "4.8.2",
     "on-build-webpack": "0.1.0",
-    "postcss-loader": "2.1.1",
+    "postcss-loader": "2.1.2",
     "sass-loader": "6.0.7",
     "style-loader": "0.20.3",
     "webpack": "3.11.0"
