@@ -14,7 +14,7 @@ module.exports = {
     ],
     output: {
         path: distDir,
-        filename: "scripts/[name].js"
+        filename: "assets/js/[name].js"
     },
     resolve: {
         extensions: ['.js'],
@@ -25,7 +25,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(__dirname +'/dist'),
         new ExtractTextPlugin({
-            filename: 'styles/default.css',
+            filename: 'assets/css/main.css',
             allChunks: true,
         }),
         new webpack.ProvidePlugin({
