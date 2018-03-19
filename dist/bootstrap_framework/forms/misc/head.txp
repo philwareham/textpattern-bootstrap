@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="<txp:site_url />assets/css/default.css">
+<link rel="stylesheet" href="<txp:site_url />styles/default.css">
 <link rel="dns-prefetch" href="https://code.jquery.com">
 <meta name="generator" content="Textpattern CMS">
 <txp:feed_link flavor="atom" format="link" label="Atom" />
