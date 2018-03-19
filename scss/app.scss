@@ -1,8 +1,13 @@
-// Comment out any Bootstrap modules that you are not using in your project.
+// Required Bootstrap modules
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
+@import "custom";
+
+
+// Comment out any optional Bootstrap modules that you are not using in your project.
+
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/type";
@@ -35,9 +40,6 @@
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
-
-
-@import "custom";
 
 
 // Add your additional CSS/SCSS rule-sets below.

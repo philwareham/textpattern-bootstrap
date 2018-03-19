@@ -7,17 +7,19 @@ var WebpackOnBuildPlugin = require('on-build-webpack');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: {
-        'styles/default.css': './scss/app.scss'
-    },
+    entry: [
+        './js/app.js',
+        './scss/app.scss',
+    ],
     output: {
         path: distDir,
-        filename: 'bundle.js'
+        filename: "js/[name].js"
     },
     plugins: [
         new CleanWebpackPlugin(__dirname +'/dist'),
-        new ExtractTextPlugin('[name]', {
-            allChunks: true
+        new ExtractTextPlugin({
+            filename: 'styles/default.css',
+            allChunks: true,
         }),
         new CopyWebpackPlugin([
             {
@@ -54,12 +56,17 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(scss)$/,
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    // Inject CSS to page.
                     fallback: 'style-loader',
                     use: [
-                        // Translates CSS into CommonJS modules.
                         { loader: 'css-loader', options: { minimize: false, importLoaders: 2 } },
                         // Run postCSS actions.
                         { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
@@ -69,9 +76,30 @@ module.exports = {
                 })
             },
             {
-                test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.png|\.jpe?g|\.gif$/,
-                loader: 'file-loader'
+                // Bundle WOFF fonts if provided.
+                test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: "url-loader",
+                    options: {
+                        // Limit at 50k. Above that it emits separate files.
+                        limit: 50000,
+                        mimetype: "application/font-woff",
+                        // Output below fonts directory
+                        name: "./fonts/[name].[ext]",
+                    }
+                }
             },
+
+
+            {
+                // Bundle images.
+                test: /\.(gif|jpe?g|png|svg|webp)$/i,
+                use: {
+                    loader: "file-loader"
+                },
+            },
+
+
         ]
     }
 };
