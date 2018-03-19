@@ -2,6 +2,4 @@
     <p><txp:text item="published_with" /> <a rel="external nofollow" href="https://textpattern.io/" title="<txp:text item="go_txp_com" />">Textpattern CMS</a></p>
     <p><a href="#">Back to top</a></p>
 </footer>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="<txp:site_url />assets/scripts/vendor/popper.min.js"></script>
-<script src="<txp:site_url />assets/scripts/main.js"></script>
+<script src="<txp:page_url type="themes_root" /><txp:page_url type="theme" />/scripts/main.js"></script>
