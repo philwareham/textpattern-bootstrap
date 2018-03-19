@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const distDir = __dirname + '/dist/bootstrap_framework';
 
 var fs = require('fs');
@@ -20,6 +21,12 @@ module.exports = {
         new ExtractTextPlugin({
             filename: 'styles/default.css',
             allChunks: true,
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            Popper: ['popper.js', 'default'],
+            'Util': 'exports-loader?Util!bootstrap/js/dist/util'
         }),
         new CopyWebpackPlugin([
             {
@@ -59,7 +66,7 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader'
                 }
             },
             {
@@ -79,27 +86,27 @@ module.exports = {
                 // Bundle WOFF fonts if provided.
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
                 use: {
-                    loader: "url-loader",
+                    loader: 'url-loader',
                     options: {
                         // Limit at 50k. Above that it emits separate files.
                         limit: 50000,
-                        mimetype: "application/font-woff",
+                        mimetype: 'application/font-woff',
                         // Output below fonts directory
-                        name: "./fonts/[name].[ext]",
+                        name: './fonts/[name].[ext]',
                     }
                 }
             },
-
-
             {
                 // Bundle images.
                 test: /\.(gif|jpe?g|png|svg|webp)$/i,
                 use: {
-                    loader: "file-loader"
+                    loader: 'file-loader'
                 },
             },
-
-
+            {
+                // Bundle jQuery, as it's required for Bootstrap functionality.
+                test: /bootstrap\/js\//, use: 'imports-loader?jQuery=jquery'
+            },
         ]
     }
 };
