@@ -16,6 +16,12 @@ module.exports = {
         path: distDir,
         filename: "scripts/[name].js"
     },
+    resolve: {
+        extensions: ['.js'],
+        alias: {
+            'jquery': 'jquery/dist/jquery.slim.js',
+        }
+    },
     plugins: [
         new CleanWebpackPlugin(__dirname +'/dist'),
         new ExtractTextPlugin({
