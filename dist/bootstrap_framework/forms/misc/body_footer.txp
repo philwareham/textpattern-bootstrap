@@ -2,4 +2,4 @@
     <p><txp:text item="published_with" /> <a rel="external nofollow" href="https://textpattern.io/" title="<txp:text item="go_txp_com" />">Textpattern CMS</a></p>
     <p><a href="#">Back to top</a></p>
 </footer>
-<script src="<txp:page_url type="themes_root" /><txp:page_url type="theme" />/scripts/main.js"></script>
+<script src="<txp:page_url type="theme_path" />/scripts/main.js"></script>
