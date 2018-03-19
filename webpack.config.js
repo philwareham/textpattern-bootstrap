@@ -13,7 +13,7 @@ module.exports = {
     ],
     output: {
         path: distDir,
-        filename: "js/[name].js"
+        filename: "scripts/[name].js"
     },
     plugins: [
         new CleanWebpackPlugin(__dirname +'/dist'),
