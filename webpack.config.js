@@ -2,10 +2,10 @@ const webpack = require('webpack');
 const distDir = __dirname + '/dist/bootstrap_framework';
 
 var fs = require('fs');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var WebpackOnBuildPlugin = require('on-build-webpack');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var WebpackOnBuildPlugin = require('on-build-webpack');
 
 module.exports = {
     entry: [
@@ -31,8 +31,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
-            Popper: ['popper.js', 'default'],
-            'Util': 'exports-loader?Util!bootstrap/js/dist/util'
+            Popper: ['popper.js', 'default']
         }),
         new CopyWebpackPlugin([
             {
