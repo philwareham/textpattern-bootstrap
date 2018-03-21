@@ -1,11 +1,11 @@
-const webpack = require('webpack');
 const distDir = __dirname + '/dist/bootstrap_framework';
 
-var fs = require('fs');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var WebpackOnBuildPlugin = require('on-build-webpack');
+const fs = require('fs');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const WebpackOnBuildPlugin = require('on-build-webpack');
+const webpack = require('webpack');
 
 module.exports = {
     entry: [
