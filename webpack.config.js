@@ -4,6 +4,7 @@ const fs = require('fs');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const WebpackOnBuildPlugin = require('on-build-webpack');
 const webpack = require('webpack');
 
@@ -50,6 +51,10 @@ module.exports = {
                 from: '**/*',
             }
         ]),
+        new UglifyJsPlugin({
+            // Minify and optimise JavaScript.
+            sourceMap: true,
+        }),
         new WebpackOnBuildPlugin(function(stats) {
             // Delete `output.filename`.
             try {
