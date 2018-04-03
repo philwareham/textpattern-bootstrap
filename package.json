@@ -36,7 +36,7 @@
   "dependencies": {
     "bootstrap": "4.0.0",
     "jquery": "3.3.1",
-    "popper.js": "1.14.1"
+    "popper.js": "1.14.2"
   },
   "browserslist": [
     "> 0.5%",
