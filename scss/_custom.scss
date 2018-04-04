@@ -212,6 +212,10 @@ $border-radius:               .25rem;
 $border-radius-lg:            .3rem;
 $border-radius-sm:            .2rem;
 
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075);
+$box-shadow:                  0 .5rem 1rem rgba($black, .15);
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175);
+
 $component-active-color:      $white;
 $component-active-bg:         theme-color("primary");
 
@@ -664,6 +668,7 @@ $pagination-border-width:           $border-width;
 $pagination-border-color:           $gray-300;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow;
+$pagination-focus-outline:          0;
 
 $pagination-hover-color:            $link-hover-color;
 $pagination-hover-bg:               $gray-200;
@@ -875,7 +880,7 @@ $breadcrumb-margin-bottom:          1rem;
 $breadcrumb-bg:                     $gray-200;
 $breadcrumb-divider-color:          $gray-600;
 $breadcrumb-active-color:           $gray-600;
-$breadcrumb-divider:                "/";
+$breadcrumb-divider:                quote("/");
 
 $breadcrumb-border-radius:          $border-radius;
 
