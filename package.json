@@ -27,7 +27,7 @@
     "on-build-webpack": "0.1.0",
     "postcss-loader": "2.1.4",
     "sass-loader": "7.0.1",
-    "style-loader": "0.20.3",
+    "style-loader": "0.21.0",
     "uglifyjs-webpack-plugin": "1.2.4",
     "url-loader": "1.0.1",
     "webpack": "4.6.0",
