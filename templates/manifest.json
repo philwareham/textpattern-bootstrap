@@ -1,6 +1,6 @@
 {
   "title": "Bootstrap framework theme",
-  "txp-type":"textpattern-theme",
+  "txp-type": "textpattern-theme",
   "version": "0.1.0",
   "description": "Bootstrap framework for Textpattern CMS.",
   "author": "Phil Wareham",
