@@ -3,6 +3,21 @@
 // See: https://getbootstrap.com/docs/4.0/getting-started/theming/
 
 
+// Sass options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+// See: https://getbootstrap.com/docs/4.0/getting-started/theming/#sass-options
+
+$spacer:              1rem;
+$enable-caret:        true;
+$enable-rounded:      true;
+$enable-shadows:      false;
+$enable-gradients:    false;
+$enable-transitions:  true;
+$enable-grid-classes: true;
+$enable-print-styles: true;
+
+
 //
 // Color system
 //
@@ -93,18 +108,6 @@ $yiq-contrasted-threshold:  150;
 $yiq-text-dark:             $gray-900;
 $yiq-text-light:            $white;
 
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-caret:              true;
-$enable-rounded:            true;
-$enable-shadows:            false;
-$enable-gradients:          false;
-$enable-transitions:        true;
-$enable-grid-classes:       true;
-$enable-print-styles:       true;
-
 
 // Spacing
 //
@@ -113,7 +116,6 @@ $enable-print-styles:       true;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // stylelint-disable
-$spacer: 1rem;
 $spacers: ();
 $spacers: map-merge((
   0: 0,
@@ -135,6 +137,7 @@ $sizes: map-merge((
 ), $sizes);
 // stylelint-enable
 
+
 // Body
 //
 // Settings for the `<body>` element.
@@ -151,6 +154,7 @@ $link-color:                theme-color("primary");
 $link-decoration:           none;
 $link-hover-color:          darken($link-color, 15%);
 $link-hover-decoration:     underline;
+
 
 // Paragraphs
 //
