@@ -18,7 +18,7 @@ Textpattern templates for use with [Bootstrap](https://getbootstrap.com) v4.
 
 Building this repository requires:
 
-* [Node.js](https://nodejs.org/) >=6.9
+* [Node.js](https://nodejs.org/)
 
 ## Build setup
 
