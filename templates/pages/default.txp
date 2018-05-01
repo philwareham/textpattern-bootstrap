@@ -3,21 +3,17 @@
 <head>
     <txp:output_form form="head" />
     <title><txp:page_title /></title>
-
     <txp:if_search>
-        <meta name="description" content="<txp:text item="search_results" />">
         <meta name="robots" content="none">
     <txp:else />
         <txp:if_category>
-            <meta name="description" content="<txp:text item="category" /> <txp:category title="1" />">
-            <meta name="robots" content="noindex, follow, noodp, noydir">
+            <meta name="robots" content="noindex, follow">
         <txp:else />
             <txp:if_author>
-                <meta name="description" content="<txp:text item="author" /> <txp:author />">
-                <meta name="robots" content="noindex, follow, noodp, noydir">
+                <meta name="robots" content="noindex, follow">
             <txp:else />
                 <meta name="description" content="<txp:site_slogan />">
-                <meta name="robots" content="index, follow, noodp, noydir">
+                <meta name="robots" content="index, follow">
                 <link rel="canonical" href="<txp:site_url />">
                 <txp:variable name="homepage" value="1" />
             </txp:if_author>
