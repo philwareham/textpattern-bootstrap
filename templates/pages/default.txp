@@ -6,18 +6,18 @@
     <txp:if_search>
         <meta name="robots" content="none">
     <txp:else />
-        <txp:if_category>
+        <txp:if_author>
             <meta name="robots" content="noindex, follow">
         <txp:else />
-            <txp:if_author>
+            <txp:meta_description />
+            <txp:if_category>
                 <meta name="robots" content="noindex, follow">
             <txp:else />
-                <meta name="description" content="<txp:site_slogan />">
                 <meta name="robots" content="index, follow">
                 <link rel="canonical" href="<txp:site_url />">
-                <txp:variable name="homepage" value="1" />
-            </txp:if_author>
-        </txp:if_category>
+                <txp:variable name="front-page" value="1" />
+            </txp:if_category>
+        </txp:if_author>
     </txp:if_search>
 </head>
 <txp:if_variable name="homepage">
