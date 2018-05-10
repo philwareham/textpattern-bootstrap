@@ -17,7 +17,7 @@
     "babel-plugin-transform-es2015-modules-strip": "0.1.1",
     "clean-webpack-plugin": "0.1.19",
     "copy-webpack-plugin": "4.5.1",
-    "cross-env": "5.1.4",
+    "cross-env": "5.1.5",
     "css-loader": "0.28.11",
     "exports-loader": "0.7.0",
     "file-loader": "1.1.11",
