@@ -456,6 +456,8 @@ $input-group-addon-color:               $input-color;
 $input-group-addon-bg:                  $gray-200;
 $input-group-addon-border-color:        $input-border-color;
 
+$custom-forms-transition:               background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
 $custom-control-gutter:                 1.5rem;
 $custom-control-spacer-x:               1rem;
 
@@ -534,6 +536,7 @@ $custom-file-height:                $input-height;
 $custom-file-height-inner:          $input-height-inner;
 $custom-file-focus-border-color:    $input-focus-border-color;
 $custom-file-focus-box-shadow:      $input-btn-focus-box-shadow;
+$custom-file-disabled-bg:           $input-disabled-bg;
 
 $custom-file-padding-y:             $input-btn-padding-y;
 $custom-file-padding-x:             $input-btn-padding-x;
