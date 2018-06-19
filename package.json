@@ -10,14 +10,14 @@
     "url": "https://github.com/philwareham/textpattern-bootstrap/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-beta.49",
+    "@babel/core": "7.0.0-beta.51",
     "@babel/preset-env": "7.0.0-beta.51",
-    "autoprefixer": "8.6.0",
+    "autoprefixer": "8.6.3",
     "babel-loader": "8.0.0-beta.3",
     "babel-plugin-transform-es2015-modules-strip": "0.1.1",
     "clean-webpack-plugin": "0.1.19",
     "copy-webpack-plugin": "4.5.1",
-    "cross-env": "5.1.6",
+    "cross-env": "5.2.0",
     "css-loader": "0.28.11",
     "exports-loader": "0.7.0",
     "file-loader": "1.1.11",
@@ -28,8 +28,8 @@
     "sass-loader": "7.0.3",
     "uglifyjs-webpack-plugin": "1.2.5",
     "url-loader": "1.0.1",
-    "webpack": "4.11.1",
-    "webpack-cli": "3.0.3"
+    "webpack": "4.12.0",
+    "webpack-cli": "3.0.8"
   },
   "dependencies": {
     "bootstrap": "4.1.1",
