@@ -12,7 +12,7 @@
   "devDependencies": {
     "@babel/core": "7.0.0-beta.51",
     "@babel/preset-env": "7.0.0-beta.51",
-    "autoprefixer": "8.6.3",
+    "autoprefixer": "9.0.2",
     "babel-loader": "8.0.0-beta.3",
     "babel-plugin-transform-es2015-modules-strip": "0.1.1",
     "clean-webpack-plugin": "0.1.19",
@@ -28,7 +28,7 @@
     "sass-loader": "7.0.3",
     "uglifyjs-webpack-plugin": "1.2.7",
     "url-loader": "1.0.1",
-    "webpack": "4.12.1",
+    "webpack": "4.16.3",
     "webpack-cli": "3.1.0"
   },
   "dependencies": {
