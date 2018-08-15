@@ -3,6 +3,7 @@ const distDir = __dirname + '/dist/bootstrap_framework';
 const fs = require('fs');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Fiber = require('fibers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
@@ -80,7 +81,14 @@ module.exports = {
                     // Run postCSS actions.
                     { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
                     // Compiles Sass to CSS.
-                    { loader: 'sass-loader', options: { outputStyle: 'compressed', precision: 7 } } // outputStyle = nested, expanded, compact or compressed
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('dart-sass'),
+                            fiber: Fiber,
+                            outputStyle: 'expanded'
+                        }
+                    }
                 ]
             },
             {
