@@ -86,7 +86,7 @@ module.exports = {
                         options: {
                             implementation: require('dart-sass'),
                             fiber: Fiber,
-                            outputStyle: 'expanded'
+                            outputStyle: 'compressed' // outputStyle = nested, expanded, compact or compressed
                         }
                     }
                 ]
