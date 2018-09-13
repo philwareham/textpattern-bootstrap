@@ -1,4 +1,4 @@
-const distDir = __dirname + '/dist/bootstrap_framework';
+const distDir = __dirname + '/themes/bootstrap_framework';
 
 const fs = require('fs');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -27,7 +27,7 @@ module.exports = {
         }
     },
     plugins: [
-        new CleanWebpackPlugin(__dirname +'/dist'),
+        new CleanWebpackPlugin(__dirname +'/themes'),
         new MiniCssExtractPlugin({
             filename: 'assets/css/main.css'
         }),

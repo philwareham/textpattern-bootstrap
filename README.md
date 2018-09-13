@@ -55,7 +55,7 @@ $ npm update
 
 ## Pre-built version
 
-We provide a pre-built version of the theme files within the `dist` directory in case you don't want to build it yourself.
+We provide a pre-built version of the theme files within the `themes` directory in case you don't want to build it yourself.
 
 ## License
 
