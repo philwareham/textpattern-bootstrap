@@ -1,0 +1,20 @@
+<p>You must preview your comment before submitting it. Email addresses are used for verification only and are not displayed with your comment. Fields marked <span class="required" title="Required" aria-label="Required">●</span> are required.</p>
+<txp:if_comments_error>
+    <txp:comments_error class="comError" wraptag="ul" break="li" />
+</txp:if_comments_error>
+<div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="name">Name <span class="required" title="Required" aria-label="Required">●</span></label>
+        <txp:comment_name_input class="form-control" size="32" />
+    </div>
+    <div class="form-group col-md-6">
+        <label for="email">Email <span class="required" title="Required" aria-label="Required">●</span></label>
+        <txp:comment_email_input class="form-control" size="32" />
+    </div>
+</div>
+<div class="form-group">
+    <label for="message">Message <span class="required" title="Required" aria-label="Required">●</span></label>
+    <txp:comment_message_input class="form-control" cols="64" rows="5" />
+</div>
+<txp:comment_preview class="btn btn-primary" />
+<txp:comment_submit class="btn btn-secondary" />
