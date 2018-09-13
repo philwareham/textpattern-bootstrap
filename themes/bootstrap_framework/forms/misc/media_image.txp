@@ -1,0 +1,14 @@
+<txp:images id='<txp:yield name="id" />' break="">
+    <txp:evaluate test="image_info">
+        <figure class="figure">
+            <img class="figure-img img-fluid rounded" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" />" src="<txp:image_url />">
+            <figcaption class="figure-caption">
+                <txp:image_info />
+            </figcaption>
+        </figure>
+    <txp:else />
+        <p>
+            <img class="img-fluid rounded" width="<txp:image_info type="w" />" height="<txp:image_info type="h" />" alt="<txp:image_info type="alt" />" src="<txp:image_url />">
+        </p>
+    </txp:evaluate>
+</txp:images>
