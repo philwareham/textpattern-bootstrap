@@ -1,5 +1,9 @@
-<footer class="blog-footer">
-    <p><txp:text item="published_with" /> <a rel="external nofollow" href="https://textpattern.io/" title="<txp:text item="go_txp_com" />">Textpattern CMS</a></p>
-    <p><a href="#">Back to top</a></p>
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">
+            © <txp:site_name />.
+            <txp:text item="published_with" /> <a rel="external nofollow" href="https://textpattern.com/" title="<txp:text item="go_txp_com" />">Textpattern CMS</a>.
+        </span>
+    </div>
 </footer>
 <script async src="<txp:page_url type="theme_path" />/assets/js/main.js"></script>
