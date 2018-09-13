@@ -51,6 +51,10 @@ html {
 
 body {
     margin-bottom: 60px; // Margin bottom matches footer fixed height.
+
+    &.with-jumbotron {
+        padding-top: 3.5rem;
+    }
 }
 
 .footer {
