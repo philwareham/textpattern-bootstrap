@@ -72,28 +72,16 @@
 
                 <txp:article />
 
-                <txp:variable name="more" value='<txp:link_to_prev /><txp:link_to_next />' />
-                <txp:variable name="prev" value='<txp:link_to_prev />' />
-                <txp:variable name="next" value='<txp:link_to_next />' />
-
-                <txp:if_variable name="more" value="">
-                <txp:else />
-                    <p class="paginator">
-                        <txp:if_variable name="prev" value="">
-                        <txp:else />
-                            <a rel="prev" href="<txp:link_to_prev />" title="<txp:prev_title />">
-                                ← <txp:text item="older" />
-                            </a>
-                        </txp:if_variable>
-
-                        <txp:if_variable name="next" value="">
-                        <txp:else />
-                            <a rel="next" href="<txp:link_to_next />" title="<txp:next_title />">
-                                <txp:text item="newer" /> →
-                            </a>
-                        </txp:if_variable>
-                    </p>
-                </txp:if_variable>
+                <txp:evaluate>
+                    <nav aria-label="<txp:text item="bootstrap_page_navigation" />">
+                        <txp:link_to_next class="btn btn-outline-primary" rel="next">
+                            <txp:text item="newer" />
+                        </txp:link_to_next>
+                        <txp:link_to_prev class="btn btn-outline-primary" rel="prev">
+                            <txp:text item="older" />
+                        </txp:link_to_prev>
+                    </nav>
+                </txp:evaluate>
 
             </txp:if_article_list>
         </main>

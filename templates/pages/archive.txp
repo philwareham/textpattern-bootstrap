@@ -45,55 +45,44 @@
                 </h1>
                 <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
 
-                <txp:variable name="more" value='<txp:newer /><txp:older />' />
-                <txp:variable name="prev" value='<txp:newer />' />
-                <txp:variable name="next" value='<txp:older />' />
-
-                <txp:if_variable name="more" value="">
+                <txp:if_plugin name="etc_pagination" version="0.5">
+                    <txp:evaluate test>
+                        <nav aria-label="<txp:text item="bootstrap_page_navigation" />">
+                            <txp:etc_pagination range="3"
+                                prev='<li class="page-item"><a class="page-link" rel="prev" href="{href}"><span aria-hidden="true">&laquo;</span><span class="sr-only"><txp:text item="prev" /></span></a></li>'
+                                next='<li class="page-item"><a class="page-link" rel="next" href="{href}"><span aria-hidden="true">&raquo;</span><span class="sr-only"><txp:text item="next" /></span></a></li>'
+                                link='<li class="page-item"><a class="page-link" href="{href}">{*}</a></li>,<li class="page-item active"><span class="page-link">{*} <span class="sr-only"><txp:text item="bootstrap_current" /></span></span></li>'
+                                gap='<li class="page-item"><span role="separator">…<span class="sr-only"><txp:text item="bootstrap_more_pages" /></span></span></li>'
+                                mask='<ul class="pagination">{prev}{first}{<+}{links}{+>}{last}{next}</ul>' />
+                        </nav>
+                    </txp:evaluate>
                 <txp:else />
-                    <p class="paginator">
-                        <txp:if_variable name="prev" value="">
-                        <txp:else />
-                            <a rel="prev" href="<txp:newer />" title="<txp:text item="newer" />">
-                                ← <txp:text item="newer" />
-                            </a>
-                        </txp:if_variable>
-
-                        <txp:if_variable name="next" value="">
-                        <txp:else />
-                            <a rel="next" href="<txp:older />" title="<txp:text item="older" />">
-                                <txp:text item="older" /> →
-                            </a>
-                        </txp:if_variable>
-                    </p>
-                </txp:if_variable>
+                    <txp:evaluate>
+                        <nav aria-label="<txp:text item="bootstrap_page_navigation" />">
+                            <txp:older class="btn btn-outline-primary" rel="next">
+                                <txp:text item="older" />
+                            </txp:older>
+                            <txp:newer class="btn btn-outline-primary" rel="prev">
+                                <txp:text item="newer" />
+                            </txp:newer>
+                        </nav>
+                    </txp:evaluate>
+                </txp:if_plugin>
 
             <txp:else />
 
                 <txp:article />
 
-                <txp:variable name="more" value='<txp:link_to_prev /><txp:link_to_next />' />
-                <txp:variable name="prev" value='<txp:link_to_prev />' />
-                <txp:variable name="next" value='<txp:link_to_next />' />
-
-                <txp:if_variable name="more" value="">
-                <txp:else />
-                    <p class="paginator">
-                        <txp:if_variable name="prev" value="">
-                        <txp:else />
-                            <a rel="prev" href="<txp:link_to_prev />" title="<txp:prev_title />">
-                                ← <txp:text item="older" />
-                            </a>
-                        </txp:if_variable>
-
-                        <txp:if_variable name="next" value="">
-                        <txp:else />
-                            <a rel="next" href="<txp:link_to_next />" title="<txp:next_title />">
-                                <txp:text item="newer" /> →
-                            </a>
-                        </txp:if_variable>
-                    </p>
-                </txp:if_variable>
+                <txp:evaluate>
+                    <nav aria-label="<txp:text item="bootstrap_page_navigation" />">
+                        <txp:link_to_next class="btn btn-outline-primary" rel="next">
+                            <txp:text item="newer" />
+                        </txp:link_to_next>
+                        <txp:link_to_prev class="btn btn-outline-primary" rel="prev">
+                            <txp:text item="older" />
+                        </txp:link_to_prev>
+                    </nav>
+                </txp:evaluate>
 
             </txp:if_article_list>
         </main>
