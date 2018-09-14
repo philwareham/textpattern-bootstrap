@@ -120,6 +120,7 @@ $yiq-contrasted-threshold:  150;
 $yiq-text-dark:             $gray-900;
 $yiq-text-light:            $white;
 
+
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
@@ -154,12 +155,14 @@ $sizes: map-merge(
   $sizes
 );
 
+
 // Body
 //
 // Settings for the `<body>` element.
 
 $body-bg:                   $white;
 $body-color:                $gray-900;
+
 
 // Links
 //
@@ -169,6 +172,7 @@ $link-color:                theme-color("primary");
 $link-decoration:           none;
 $link-hover-color:          darken($link-color, 15%);
 $link-hover-decoration:     underline;
+
 
 // Paragraphs
 //
@@ -214,6 +218,7 @@ $container-max-widths: (
 
 $grid-columns:                12;
 $grid-gutter-width:           30px;
+
 
 // Components
 //
@@ -345,6 +350,7 @@ $table-dark-color:            $body-bg;
 $table-striped-order:         odd;
 
 $table-caption-color:         $text-muted;
+
 
 // Buttons + Forms
 //
@@ -580,6 +586,7 @@ $custom-file-text: (
 
 
 // Form validation
+
 $form-feedback-margin-top:          $form-text-margin-top;
 $form-feedback-font-size:           $small-font-size;
 $form-feedback-valid-color:         theme-color("success");
@@ -633,6 +640,7 @@ $zindex-modal:                      1050;
 $zindex-popover:                    1060;
 $zindex-tooltip:                    1070;
 
+
 // Navs
 
 $nav-link-padding-y:                .5rem;
@@ -653,6 +661,7 @@ $nav-pills-link-active-bg:          $component-active-bg;
 
 $nav-divider-color:                 $gray-200;
 $nav-divider-margin-y:              ($spacer / 2);
+
 
 // Navbar
 
@@ -685,6 +694,11 @@ $navbar-light-active-color:         rgba($black, .9);
 $navbar-light-disabled-color:       rgba($black, .3);
 $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
 $navbar-light-toggler-border-color: rgba($black, .1);
+
+$navbar-light-brand-color:          $navbar-light-active-color;
+$navbar-light-brand-hover-color:    $navbar-light-active-color;
+$navbar-dark-brand-color:           $navbar-dark-active-color;
+$navbar-dark-brand-hover-color:     $navbar-dark-active-color;
 
 
 // Pagination
@@ -863,6 +877,7 @@ $progress-bar-bg:                   theme-color("primary");
 $progress-bar-animation-timing:     1s linear infinite;
 $progress-bar-transition:           width .6s ease;
 
+
 // List group
 
 $list-group-bg:                     $white;
@@ -967,5 +982,6 @@ $pre-scrollable-max-height:         340px;
 
 
 // Printing
+
 $print-page-size:                   a3;
 $print-body-min-width:              map-get($grid-breakpoints, "lg");
