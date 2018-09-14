@@ -13,32 +13,46 @@
             <txp:if_category>
                 <meta name="robots" content="noindex, follow">
             <txp:else />
-                <meta name="robots" content="index, follow">
-                <link rel="canonical" href="<txp:site_url />">
-                <txp:variable name="homepage" value="1" />
+                <txp:variable name="page" value='<txp:page_url type="pg" />' />
+                <txp:if_variable name="page" value="1">
+                    <meta name="robots" content="index, follow">
+                    <link rel="canonical" href="<txp:site_url />">
+                    <script type="application/ld+json">
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            "headline": "<txp:site_name escape="json" />",
+                            <txp:if_description>"description": "<txp:meta_description format="" escape="json" />",</txp:if_description>
+                            "url": "<txp:site_url />"
+                        }
+                    </script>
+                <txp:else />
+                    <meta name="robots" content="noindex, follow">
+                </txp:if_variable>
+                <txp:variable name="front-page" value="1" />
             </txp:if_category>
         </txp:if_author>
     </txp:if_search>
 </head>
-<txp:if_variable name="homepage">
+<txp:if_variable name="front-page">
 <body class="with-jumbotron">
-        <txp:output_form form="body_header" />
+    <txp:output_form form="body_header" />
 
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-3">Hello, world!</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-            </div>
-        </div>
-
+    <div class="jumbotron">
         <div class="container">
-
-            <main class="large-9 columns" role="content">
-                <txp:article limit="5" />
-            </main>
-
+            <h1 class="display-3">Hello, world!</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
         </div>
+    </div>
+
+    <div class="container">
+
+        <main class="large-9 columns" role="content">
+            <txp:article limit="5" />
+        </main>
+
+    </div>
 <txp:else />
 <body>
     <txp:output_form form="body_header" />
@@ -52,9 +66,6 @@
         <main class="large-9 columns" role="content">
             ...content placeholder...
         </main>
-        <aside class="large-3 columns">
-            ...content placeholder...
-        </aside>
     </div>
 
 
