@@ -22,7 +22,7 @@
     "dart-sass": "1.14.1",
     "exports-loader": "0.7.0",
     "fibers": "3.0.0",
-    "file-loader": "1.1.11",
+    "file-loader": "2.0.0",
     "imports-loader": "0.8.0",
     "mini-css-extract-plugin": "0.4.3",
     "postcss-loader": "3.0.0",
