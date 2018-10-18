@@ -2,8 +2,8 @@
 
 **Currently under development.**
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/philwareham/textpattern-bootstrap.svg)](https://greenkeeper.io/)
-[![Build Status](https://img.shields.io/travis/philwareham/textpattern-bootstrap/master.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
+[![Greenkeeper](https://badges.greenkeeper.io/philwareham/textpattern-bootstrap.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/philwareham/textpattern-bootstrap/master.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
 
 [Demo](http://bootstrap.philwareham.co.uk/).
 
