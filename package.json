@@ -15,7 +15,7 @@
     "autoprefixer": "9.3.1",
     "babel-loader": "8.0.4",
     "babel-plugin-transform-es2015-modules-strip": "0.1.1",
-    "clean-webpack-plugin": "0.1.19",
+    "clean-webpack-plugin": "1.0.0",
     "copy-webpack-plugin": "4.6.0",
     "cross-env": "5.2.0",
     "css-loader": "1.0.1",
