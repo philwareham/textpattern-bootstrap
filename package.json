@@ -19,7 +19,7 @@
     "copy-webpack-plugin": "4.6.0",
     "cross-env": "5.2.0",
     "css-loader": "1.0.1",
-    "dart-sass": "1.15.1",
+    "dart-sass": "1.15.2",
     "exports-loader": "0.7.0",
     "fibers": "3.1.1",
     "file-loader": "2.0.0",
