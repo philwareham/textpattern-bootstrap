@@ -46,8 +46,8 @@
                 <txp:article class="article-list" form="article_listing" limit="5" wraptag="ul" />
 
                 <txp:if_plugin name="etc_pagination" version="0.5">
-                    <txp:evaluate test>
-                        <nav aria-label="<txp:text item="bootstrap_page_navigation" />">
+                    <txp:evaluate>
+                        <nav aria-label="<txp:text item="page_nav" />">
                             <txp:etc_pagination range="3"
                                 prev='<li class="page-item"><a class="page-link" rel="prev" href="{href}"><span aria-hidden="true">&laquo;</span><span class="sr-only"><txp:text item="prev" /></span></a></li>'
                                 next='<li class="page-item"><a class="page-link" rel="next" href="{href}"><span aria-hidden="true">&raquo;</span><span class="sr-only"><txp:text item="next" /></span></a></li>'
@@ -57,8 +57,8 @@
                         </nav>
                     </txp:evaluate>
                 <txp:else />
-                    <txp:evaluate>
-                        <nav aria-label="<txp:text item="bootstrap_page_navigation" />">
+                    <txp:evaluate test="next,prev">
+                        <nav aria-label="<txp:text item="page_nav" />">
                             <txp:older class="btn btn-outline-primary" rel="next">
                                 <txp:text item="older" />
                             </txp:older>
@@ -73,8 +73,8 @@
 
                 <txp:article />
 
-                <txp:evaluate>
-                    <nav aria-label="<txp:text item="bootstrap_page_navigation" />">
+                <txp:evaluate test="next,prev">
+                    <nav aria-label="<txp:text item="page_nav" />">
                         <txp:link_to_next class="btn btn-outline-primary" rel="next">
                             <txp:text item="newer" />
                         </txp:link_to_next>
