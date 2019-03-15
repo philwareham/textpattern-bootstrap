@@ -27,7 +27,7 @@ module.exports = {
         }
     },
     plugins: [
-        new CleanWebpackPlugin(__dirname +'/themes'),
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'assets/css/main.css'
         }),
