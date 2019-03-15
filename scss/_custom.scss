@@ -1,7 +1,26 @@
+// Bootstrap variables
 // Variables
 //
-// Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// See: https://getbootstrap.com/docs/4.3/getting-started/theming/
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                                true;
+$enable-rounded:                              true;
+$enable-shadows:                              false;
+$enable-gradients:                            false;
+$enable-transitions:                          true;
+$enable-prefers-reduced-motion-media-query:   true;
+$enable-grid-classes:                         true;
+$enable-pointer-cursor-for-buttons:           true;
+$enable-print-styles:                         true;
+$enable-responsive-font-sizes:                false;
+$enable-validation-icons:                     true;
+$enable-deprecation-messages:                 true;
+
 
 // Color system
 
@@ -100,25 +119,6 @@ $yiq-contrasted-threshold:  150;
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark:             $gray-900;
 $yiq-text-light:            $white;
-
-
-// Options
-//
-// Quickly modify global styling by enabling or disabling optional features.
-
-$enable-caret:                                true;
-$enable-rounded:                              true;
-$enable-shadows:                              false;
-$enable-gradients:                            false;
-$enable-transitions:                          true;
-$enable-prefers-reduced-motion-media-query:   true;
-$enable-hover-media-query:                    false; // Deprecated, no longer affects any compiled CSS
-$enable-grid-classes:                         true;
-$enable-pointer-cursor-for-buttons:           true;
-$enable-print-styles:                         true;
-$enable-responsive-font-sizes:                false;
-$enable-validation-icons:                     true;
-$enable-deprecation-messages:                 true;
 
 
 // Spacing
