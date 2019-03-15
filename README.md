@@ -3,7 +3,7 @@
 **Currently under development.**
 
 [![Greenkeeper](https://badges.greenkeeper.io/philwareham/textpattern-bootstrap.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/philwareham/textpattern-bootstrap/master.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
+[![Build Status](https://travis-ci.org/philwareham/textpattern-bootstrap.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
 
 [Demo](http://bootstrap.philwareham.co.uk/).
 
