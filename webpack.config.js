@@ -3,7 +3,6 @@ const distDir = __dirname + '/themes/bootstrap_framework';
 const fs = require('fs');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const Fiber = require('fibers');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
@@ -85,7 +84,6 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('dart-sass'),
-                            fiber: Fiber,
                             outputStyle: 'compressed' // outputStyle = nested, expanded, compact or compressed
                         }
                     }
