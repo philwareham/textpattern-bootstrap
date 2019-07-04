@@ -10,8 +10,8 @@
     "url": "https://github.com/philwareham/textpattern-bootstrap/issues"
   },
   "devDependencies": {
-    "@babel/core": "7.4.5",
-    "@babel/preset-env": "7.4.5",
+    "@babel/core": "7.5.0",
+    "@babel/preset-env": "7.5.0",
     "autoprefixer": "9.6.0",
     "babel-loader": "8.0.6",
     "babel-plugin-transform-es2015-modules-strip": "0.1.1",
