@@ -73,9 +73,10 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
+                    // Translates CSS into CommonJS modules.
                     { loader: 'css-loader', options: { importLoaders: 2 } },
                     // Run postCSS actions.
                     { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
@@ -84,7 +85,9 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
-                            outputStyle: 'compressed' // outputStyle = nested, expanded, compact or compressed
+                            sassOptions: {
+                                outputStyle: 'expanded'
+                            }
                         }
                     }
                 ]
