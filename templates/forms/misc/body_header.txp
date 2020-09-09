@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <txp:section_list class="navbar-nav mr-auto" default_title='<txp:text item="home" />' include_default wraptag="ul" break="">
             <li class="nav-item<txp:if_section name='<txp:section />'> active</txp:if_section>">
-                <a class="nav-link" href="<txp:section url />"><txp:section title /><txp:if_section name='<txp:section />'> <span class="sr-only"><txp:text item="bootstrap_current" /></span></txp:if_section></a>
+                <a class="nav-link" href="<txp:section url />"><txp:section title /><txp:if_section name='<txp:section />'> <span class="sr-only">(<txp:text item="current" />)</span></txp:if_section></a>
             </li>
         </txp:section_list>
         <form class="form-inline my-2 my-lg-0" role="search" method="get" action="<txp:site_url />">
