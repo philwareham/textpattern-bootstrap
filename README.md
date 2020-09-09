@@ -59,4 +59,4 @@ We provide a pre-built version of the theme files within the `themes` directory 
 
 ## License
 
-Licensed under MIT license except Textpattern templates, which are licensed under GPLv2 license.
+Bootstrap is licensed under MIT license. Textpattern templates are licensed under GPLv2 license.
