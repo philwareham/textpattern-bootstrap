@@ -4,7 +4,7 @@ const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -24,6 +24,10 @@ module.exports = {
         alias: {
             'jquery': 'jquery/dist/jquery.slim.js',
         }
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()]
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -52,16 +56,7 @@ module.exports = {
                 context: 'templates',
                 from: '**/*',
             }
-        ]),
-        new UglifyJsPlugin({
-            // Minify and optimise JavaScript.
-            uglifyOptions: {
-                output: {
-                    comments: false,
-                    beautify: false
-                }
-            }
-        }),
+        ])
     ],
     module: {
         rules: [
