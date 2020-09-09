@@ -11,8 +11,9 @@ Textpattern templates for use with [Bootstrap](https://getbootstrap.com) v4.
 
 ## Supported web browsers
 
-* Internet Explorer 11.
 * Chrome, Edge, Firefox, Safari and Opera the last two recent stable releases.
+* Internet Explorer 11.
+* Firefox ESR latest major point release.
 
 ## Requirements
 
