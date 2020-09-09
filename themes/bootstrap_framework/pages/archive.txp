@@ -51,8 +51,8 @@
                             <txp:etc_pagination range="3"
                                 prev='<li class="page-item"><a class="page-link" rel="prev" href="{href}"><span aria-hidden="true">&laquo;</span><span class="sr-only"><txp:text item="prev" /></span></a></li>'
                                 next='<li class="page-item"><a class="page-link" rel="next" href="{href}"><span aria-hidden="true">&raquo;</span><span class="sr-only"><txp:text item="next" /></span></a></li>'
-                                link='<li class="page-item"><a class="page-link" href="{href}">{*}</a></li>,<li class="page-item active"><span class="page-link">{*} <span class="sr-only"><txp:text item="bootstrap_current" /></span></span></li>'
-                                gap='<li class="page-item"><span role="separator">…<span class="sr-only"><txp:text item="bootstrap_more_pages" /></span></span></li>'
+                                link='<li class="page-item"><a class="page-link" href="{href}">{*}</a></li>,<li class="page-item active"><span class="page-link">{*} <span class="sr-only">(<txp:text item="current" />)</span></span></li>'
+                                gap='<li class="page-item"><span role="separator">…<span class="sr-only"><txp:text item="more_pages" /></span></span></li>'
                                 mask='<ul class="pagination">{prev}{first}{<+}{links}{+>}{last}{next}</ul>' />
                         </nav>
                     </txp:evaluate>
