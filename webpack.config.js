@@ -14,7 +14,7 @@ module.exports = {
     ],
     output: {
         path: distDir,
-        filename: "assets/js/[name].js"
+        filename: 'assets/js/[name].js'
     },
     performance: {
         hints: false
@@ -37,6 +37,8 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
+            jquery: 'jquery',
+            'window.jQuery': 'jquery',
             Popper: ['popper.js', 'default'],
             // Bootstrap scripts.
             Util: 'exports-loader?Util!bootstrap/js/dist/util',
@@ -49,6 +51,7 @@ module.exports = {
             Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
             Scrollspy: 'exports-loader?Scrollspy!bootstrap/js/dist/scrollspy',
             Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
+            Toast: 'exports-loader?Toast!bootstrap/js/dist/toast',
             Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip'
         }),
         new CopyWebpackPlugin({
@@ -107,7 +110,10 @@ module.exports = {
                 // Bundle images.
                 test: /\.(gif|jpe?g|png|svg|webp)$/i,
                 use: {
-                    loader: 'file-loader'
+                    loader: 'file-loader',
+                    options: {
+                        name: './img/[name].[ext]'
+                    }
                 },
             },
             {
