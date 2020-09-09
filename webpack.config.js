@@ -115,17 +115,7 @@ module.exports = {
                         name: './img/[name].[ext]'
                     }
                 },
-            },
-            //{
-            //    // Bundle jQuery, as it's required for Bootstrap functionality.
-            //    test: /bootstrap\/js\//,
-            //    use: {
-            //        loader: 'imports-loader',
-            //        options: {
-            //            imports: 'default jquery $'
-            //        },
-            //    }
-            //}
+            }
         ]
     }
 };
