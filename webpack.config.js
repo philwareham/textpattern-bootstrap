@@ -9,7 +9,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-        //'./js/app.js',
+        './js/app.js',
         './scss/app.scss',
     ],
     output: {
@@ -116,10 +116,16 @@ module.exports = {
                     }
                 },
             },
-            {
-                // Bundle jQuery, as it's required for Bootstrap functionality.
-                test: /bootstrap\/js\//, use: 'imports-loader?jQuery=jquery'
-            },
+            //{
+            //    // Bundle jQuery, as it's required for Bootstrap functionality.
+            //    test: /bootstrap\/js\//,
+            //    use: {
+            //        loader: 'imports-loader',
+            //        options: {
+            //            imports: 'default jquery $'
+            //        },
+            //    }
+            //}
         ]
     }
 };
