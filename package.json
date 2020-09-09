@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.8.7",
-    "@babel/preset-env": "7.8.7",
+    "@babel/preset-env": "7.11.5",
     "autoprefixer": "9.7.4",
     "babel-loader": "8.1.0",
     "babel-plugin-transform-es2015-modules-strip": "0.1.1",
