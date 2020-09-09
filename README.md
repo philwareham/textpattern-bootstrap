@@ -5,9 +5,9 @@
 [![Build Status](https://travis-ci.org/philwareham/textpattern-bootstrap.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
 [![Known Vulnerabilities](https://snyk.io/test/github/philwareham/textpattern-bootstrap/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/textpattern-bootstrap?targetFile=package.json)
 
-[Demo](http://bootstrap.philwareham.co.uk/).
+[Demo](https://bootstrap.philwareham.co.uk/).
 
-Textpattern templates for use with [Bootstrap](https://getbootstrap.com) v4.
+Textpattern templates for use with [Bootstrap](https://getbootstrap.com/) v4.
 
 ## Supported web browsers
 
@@ -25,7 +25,7 @@ Building this repository requires:
 
 ### Installing required tools
 
-The project uses [Webpack](https://webpack.github.io/) to run tasks and [Sass](http://sass-lang.com/) for CSS pre-processing. First make sure you have a recent version of [Node.js](https://nodejs.org/) installed. You can install Node.js using the [installer](https://nodejs.org/en/download/) or [package manager](https://nodejs.org/en/download/package-manager/).
+The project uses [Webpack](https://webpack.github.io/) to run tasks and [Sass](https://sass-lang.com/) for CSS pre-processing. First make sure you have a recent version of [Node.js](https://nodejs.org/) installed. You can install Node.js using the [installer](https://nodejs.org/en/download/) or [package manager](https://nodejs.org/en/download/package-manager/).
 
 ### Installing dependencies
 
