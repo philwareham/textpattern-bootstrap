@@ -9,7 +9,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: [
-        './js/app.js',
+        //'./js/app.js',
         './scss/app.scss',
     ],
     output: {

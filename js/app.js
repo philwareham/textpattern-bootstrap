@@ -7,10 +7,11 @@ require('bootstrap/js/dist/carousel');
 require('bootstrap/js/dist/collapse');
 require('bootstrap/js/dist/dropdown');
 require('bootstrap/js/dist/modal');
+require('bootstrap/js/dist/popover');
 require('bootstrap/js/dist/scrollspy');
 require('bootstrap/js/dist/tab');
+require('bootstrap/js/dist/toast');
 require('bootstrap/js/dist/tooltip');
-require('bootstrap/js/dist/popover');
 
 
 // Add your additional JavaScript below.
