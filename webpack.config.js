@@ -51,12 +51,14 @@ module.exports = {
             Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
             Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip'
         }),
-        new CopyWebpackPlugin([
-            {
-                context: 'templates',
-                from: '**/*',
-            }
-        ])
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    context: 'templates',
+                    from: '**/*',
+                },
+            ],
+        }),
     ],
     module: {
         rules: [
