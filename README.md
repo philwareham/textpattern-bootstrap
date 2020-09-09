@@ -2,8 +2,8 @@
 
 **Currently under development.**
 
-[![Greenkeeper](https://badges.greenkeeper.io/philwareham/textpattern-bootstrap.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/philwareham/textpattern-bootstrap.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
+[![Known Vulnerabilities](https://snyk.io/test/github/philwareham/textpattern-bootstrap/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/textpattern-bootstrap?targetFile=package.json)
 
 [Demo](http://bootstrap.philwareham.co.uk/).
 
@@ -59,4 +59,4 @@ We provide a pre-built version of the theme files within the `themes` directory 
 
 ## License
 
-Licensed under MIT license except Textpattern templates, which are licensed under GPLv2 license.
+Bootstrap is licensed under MIT license. Textpattern templates are licensed under GPLv2 license.
