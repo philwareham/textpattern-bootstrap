@@ -27,7 +27,7 @@
     "sass-loader": "10.0.2",
     "terser-webpack-plugin": "4.2.1",
     "url-loader": "4.1.0",
-    "webpack": "4.44.1",
+    "webpack": "4.44.2",
     "webpack-cli": "3.3.12"
   },
   "dependencies": {
