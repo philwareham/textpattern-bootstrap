@@ -44,7 +44,7 @@
     "IE 11"
   ],
   "scripts": {
-    "build": "webpack -p --progress"
+    "build": "webpack --progress"
   },
   "license": "(MIT AND GPL-2.0)"
 }
