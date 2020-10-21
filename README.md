@@ -3,7 +3,6 @@
 **Currently under development.**
 
 [![Build Status](https://travis-ci.org/philwareham/textpattern-bootstrap.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
-[![Known Vulnerabilities](https://snyk.io/test/github/philwareham/textpattern-bootstrap/badge.svg?targetFile=package.json)](https://snyk.io/test/github/philwareham/textpattern-bootstrap?targetFile=package.json)
 
 [Demo](https://bootstrap.philwareham.co.uk/).
 
