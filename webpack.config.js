@@ -74,21 +74,25 @@ module.exports = {
                 test: /\.(scss)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    // Translates CSS into CommonJS modules.
-                    { loader: 'css-loader' },
-                    // Run postCSS actions.
-                    { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
-                    // Compiles Sass to CSS.
+                    {
+                        loader: 'css-loader',
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [require('autoprefixer')],
+                        },
+                    },
                     {
                         loader: 'sass-loader',
                         options: {
                             implementation: require('sass'),
                             sassOptions: {
-                                outputStyle: 'expanded'
-                            }
-                        }
-                    }
-                ]
+                                outputStyle: 'expanded',
+                            },
+                        },
+                    },
+                ],
             },
             // Bundle WOFF fonts and SVGs if provided.
             {
