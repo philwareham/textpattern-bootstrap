@@ -68,9 +68,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                use: ['babel-loader'],
             },
             {
                 test: /\.(scss)$/,
@@ -92,30 +90,16 @@ module.exports = {
                     }
                 ]
             },
+            // Bundle WOFF fonts and SVGs if provided.
             {
-                // Bundle WOFF fonts if provided.
-                test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        // Limit at 50k. Above that it emits separate files.
-                        limit: 50000,
-                        mimetype: 'application/font-woff',
-                        // Output below fonts directory
-                        name: './fonts/[name].[ext]',
-                    }
-                }
+                test: /\.(woff(2)?|svg)$/,
+                type: 'asset/inline',
             },
+            // Bundle images if provided.
             {
-                // Bundle images.
-                test: /\.(gif|jpe?g|png|svg|webp)$/i,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: './img/[name].[ext]'
-                    }
-                },
-            }
-        ]
-    }
+                test: /\.(?:ico|gif|jpe?g|png|svg|webp)$/i,
+                type: 'asset/resource',
+            },
+        ],
+    },
 };
