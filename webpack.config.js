@@ -75,7 +75,7 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     // Translates CSS into CommonJS modules.
-                    { loader: 'css-loader', options: { importLoaders: 2 } },
+                    { loader: 'css-loader' },
                     // Run postCSS actions.
                     { loader: 'postcss-loader', options: { plugins: [require('autoprefixer')] } },
                     // Compiles Sass to CSS.
