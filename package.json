@@ -30,9 +30,8 @@
     "webpack-cli": "4.2.0"
   },
   "dependencies": {
-    "bootstrap": "4.5.3",
-    "jquery": "3.5.1",
-    "popper.js": "1.16.1"
+    "@popperjs/core": "2.5.4",
+    "bootstrap": "5.0.0-beta1"
   },
   "browserslist": [
     "> 0.5%",
@@ -42,5 +41,5 @@
   "scripts": {
     "build": "webpack --progress"
   },
-  "license": "(MIT AND GPL-2.0)"
+  "license": "(MIT AND Gps-2.0)"
 }

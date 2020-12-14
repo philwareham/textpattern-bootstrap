@@ -10555,23 +10555,23 @@ button.bg-dark:focus {
   text-transform: capitalize !important;
 }
 
-.font-weight-light {
+.fw-light {
   font-weight: 300 !important;
 }
 
-.font-weight-lighter {
+.fw-lighter {
   font-weight: lighter !important;
 }
 
-.font-weight-normal {
+.fw-normal {
   font-weight: 400 !important;
 }
 
-.font-weight-bold {
+.fw-bold {
   font-weight: 700 !important;
 }
 
-.font-weight-bolder {
+.fw-bolder {
   font-weight: bolder !important;
 }
 

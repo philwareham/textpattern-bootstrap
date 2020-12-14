@@ -6,7 +6,7 @@
 
 [Demo](https://bootstrap.philwareham.co.uk/).
 
-Textpattern templates for use with [Bootstrap](https://getbootstrap.com/) v4.
+Textpattern templates for use with [Bootstrap](https://getbootstrap.com/) v5.
 
 ## Supported web browsers
 

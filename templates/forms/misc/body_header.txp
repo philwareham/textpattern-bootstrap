@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" aria-label="<txp:text item="site_nav" />">
     <a class="navbar-brand" href="<txp:site_url />"><txp:site_name /></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <txp:section_list class="navbar-nav mr-auto" default_title='<txp:text item="home" />' include_default wraptag="ul" break="">
+        <txp:section_list class="navbar-nav me-auto" default_title='<txp:text item="home" />' include_default wraptag="ul" break="">
             <li class="nav-item<txp:if_section name='<txp:section />'> active</txp:if_section>">
                 <a class="nav-link" href="<txp:section url />"><txp:section title /><txp:if_section name='<txp:section />'> <span class="sr-only">(<txp:text item="current" />)</span></txp:if_section></a>
             </li>
         </txp:section_list>
         <form class="form-inline my-2 my-lg-0" role="search" method="get" action="<txp:site_url />">
-            <input class="form-control mr-sm-2" name="q" type="search" placeholder="<txp:text item="search" />" aria-label="<txp:text item="search" />"<txp:if_search> value="<txp:search_term />"</txp:if_search>>
+            <input class="form-control me-sm-2" name="q" type="search" placeholder="<txp:text item="search" />" aria-label="<txp:text item="search" />"<txp:if_search> value="<txp:search_term />"</txp:if_search>>
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><txp:text item="search" /></button>
         </form>
     </div>
