@@ -1,6 +1,6 @@
 // Comment out any Bootstrap modules that you are not using in your project.
 
-require('bootstrap/js/dist/util');
+//require('bootstrap/js/dist/util');
 require('bootstrap/js/dist/alert');
 require('bootstrap/js/dist/button');
 require('bootstrap/js/dist/carousel');

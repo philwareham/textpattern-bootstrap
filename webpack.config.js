@@ -19,12 +19,6 @@ module.exports = {
     performance: {
         hints: false
     },
-    resolve: {
-        extensions: ['.js'],
-        alias: {
-            'jquery': 'jquery/dist/jquery.slim.js',
-        }
-    },
     optimization: {
         minimize: true,
         minimizer: [new TerserPlugin()]
@@ -35,13 +29,9 @@ module.exports = {
             filename: 'assets/css/main.css'
         }),
         new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            jquery: 'jquery',
-            'window.jQuery': 'jquery',
             Popper: ['popper.js', 'default'],
             // Bootstrap scripts.
-            Util: 'exports-loader?Util!bootstrap/js/dist/util',
+            //Util: 'exports-loader?Util!bootstrap/js/dist/util',
             Alert: 'exports-loader?Alert!bootstrap/js/dist/alert',
             Button: 'exports-loader?Button!bootstrap/js/dist/button',
             Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel',
