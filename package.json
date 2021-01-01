@@ -30,7 +30,7 @@
     "webpack-cli": "4.3.1"
   },
   "dependencies": {
-    "@popperjs/core": "2.5.4",
+    "@popperjs/core": "2.6.0",
     "bootstrap": "5.0.0-beta1"
   },
   "browserslist": [
