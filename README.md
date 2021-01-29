@@ -2,8 +2,7 @@
 
 **Currently under development.**
 
-[![Build Status](https://travis-ci.org/philwareham/textpattern-bootstrap.svg)](https://travis-ci.org/philwareham/textpattern-bootstrap)
-
+[![Build Status](https://travis-ci.com/philwareham/textpattern-bootstrap.svg)](https://travis-ci.com/philwareham/textpattern-bootstrap)
 [Demo](https://bootstrap.philwareham.co.uk/).
 
 Textpattern templates for use with [Bootstrap](https://getbootstrap.com/) v5.

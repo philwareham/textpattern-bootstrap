@@ -4,10 +4,10 @@ const fs = require('fs');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'production',
     entry: [
         './js/app.js',
         './scss/app.scss',
@@ -20,8 +20,7 @@ module.exports = {
         hints: false
     },
     optimization: {
-        minimize: true,
-        minimizer: [new TerserPlugin()]
+        minimize: true
     },
     plugins: [
         new CleanWebpackPlugin(),
