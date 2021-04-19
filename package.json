@@ -23,7 +23,7 @@
     "fibers": "5.0.0",
     "mini-css-extract-plugin": "1.4.1",
     "postcss-loader": "5.2.0",
-    "sass": "1.32.8",
+    "sass": "1.32.10",
     "sass-loader": "11.0.1",
     "webpack": "5.33.2",
     "webpack-cli": "4.6.0"
