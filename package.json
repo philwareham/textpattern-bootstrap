@@ -16,7 +16,7 @@
     "babel-loader": "8.2.2",
     "babel-plugin-transform-es2015-modules-strip": "0.1.2",
     "clean-webpack-plugin": "3.0.0",
-    "copy-webpack-plugin": "9.0.0",
+    "copy-webpack-plugin": "9.0.1",
     "cross-env": "7.0.3",
     "css-loader": "5.2.6",
     "exports-loader": "3.0.0",
