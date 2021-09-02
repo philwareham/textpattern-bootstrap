@@ -29,7 +29,7 @@
     "webpack-cli": "4.7.2"
   },
   "dependencies": {
-    "@popperjs/core": "2.9.3",
+    "@popperjs/core": "2.10.0",
     "bootstrap": "5.0.2"
   },
   "browserslist": [
