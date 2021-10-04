@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@popperjs/core": "2.10.2",
-    "bootstrap": "5.1.0"
+    "bootstrap": "5.1.1"
   },
   "browserslist": [
     "> 0.5%",
