@@ -21,7 +21,7 @@
     "css-loader": "6.3.0",
     "exports-loader": "3.0.0",
     "fibers": "5.0.0",
-    "mini-css-extract-plugin": "2.3.0",
+    "mini-css-extract-plugin": "2.4.1",
     "postcss-loader": "6.1.1",
     "sass": "1.42.1",
     "sass-loader": "12.1.0",
